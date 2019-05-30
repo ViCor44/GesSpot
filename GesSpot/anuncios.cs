@@ -10,111 +10,101 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Data.SqlClient;
 namespace GesSpot
 {
     public partial class Anuncios : Form
     {
-        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
-        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
-        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
-        private const int WM_APPCOMMAND = 0x319;
-        private const int APPCOMMAND_MEDIA_PLAY_PAUSE = 0xE0000;
-        private const int APPCOMMAND_MEDIA_NEXTTRACK = 0xB0000;
-        private const int APPCOMMAND_MEDIA_PREVIOUSTRACK = 0xC0000;
+        
+        
+              
 
-        [DllImport("user32.dll")]
-        public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
-
-        [DllImport("user32.dll")]
-        public static extern IntPtr FindWindow(string strClassName, string strWindowName);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint processId);
-
-        [DllImport("user32.dll")]
-        public static extern IntPtr GetActiveWindow();
-
-        // Pausa o Spotify
-        public void PlayPause()
-        {
-            // Janela do Spotify
-            IntPtr hWnd = FindWindow("Chrome_WidgetWin_0", null);
-            if (hWnd == IntPtr.Zero)
-                return;
-            uint pID;
-            GetWindowThreadProcessId(hWnd, out pID);
-            SendMessage(hWnd, WM_APPCOMMAND, hWnd, (IntPtr)APPCOMMAND_MEDIA_PLAY_PAUSE);
-        }
+        
 
         public Anuncios()
         {
             InitializeComponent();
-        }
 
+        }
+        // Instancia os botões dos anuncios
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                // ... If the directory doesn't exist, create it.
-                if (!Directory.Exists(@"C:\GesSpot\"))
+            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
+            SqlConnection con = new SqlConnection(source);            
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonProperties", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            string myColor;
+            string path;
+            foreach (DataRow row in dt.Rows)
+            {                
+
+                switch (row["buttonID"].ToString().ToLower())
                 {
-                    Directory.CreateDirectory(@"C:\GesSpot\");
-                }
+                    case "1":
+                        button1.Text = row["buttonID"].ToString() + " - " + row["buttonText"].ToString();
+                        myColor = row["buttonColor"].ToString();
+                        button1.BackColor = System.Drawing.ColorTranslator.FromHtml(myColor);
+                        path = row["buttonPath"].ToString();
+                        button1.Tag = path;
+                        button1.Click += new System.EventHandler(this.button_Clicked);
+                        break;
+                    case "2":
+                        button2.Text = row["buttonID"].ToString() + " - " + row["buttonText"].ToString();
+                        myColor = row["buttonColor"].ToString();
+                        button2.BackColor = System.Drawing.ColorTranslator.FromHtml(myColor);
+                        path = row["buttonPath"].ToString();
+                        button2.Tag = path;
+                        button2.Click += new System.EventHandler(this.button_Clicked);
+                        break;
+                    case "3":
+                        button3.Text = row["buttonID"].ToString() + " - " + row["buttonText"].ToString();
+                        myColor = row["buttonColor"].ToString();
+                        button3.BackColor = System.Drawing.ColorTranslator.FromHtml(myColor);
+                        path = row["buttonPath"].ToString();
+                        button3.Tag = path;
+                        button3.Click += new System.EventHandler(this.button_Clicked);
+                        break;
+                    case "4":
+                        button4.Text = row["buttonID"].ToString() + " - " + row["buttonText"].ToString();
+                        myColor = row["buttonColor"].ToString();
+                        button4.BackColor = System.Drawing.ColorTranslator.FromHtml(myColor);
+                        path = row["buttonPath"].ToString();
+                        button4.Tag = path;
+                        button4.Click += new System.EventHandler(this.button_Clicked);
+                        break;
+                    case "5":
+                        button5.Text = row["buttonID"].ToString() + " - " + row["buttonText"].ToString();
+                        myColor = row["buttonColor"].ToString();
+                        button5.BackColor = System.Drawing.ColorTranslator.FromHtml(myColor);
+                        path = row["buttonPath"].ToString();
+                        button5.Tag = path;
+                        button5.Click += new System.EventHandler(this.button_Clicked);
+                        break;
+                }                
             }
-            catch (Exception)
+            // botões não instanciados ficam invisiveis
+            foreach (Control b in Controls)
             {
-                // Fail silently.
-            }
-            string path = @"C:\GesSpot\Example.txt";
-            ReadFile(path);
-        }
-
-        /* ----------------------Read Button Name ---------------*/
-        public void ReadFile(string path)
-        {
-            int i = 0;
-            List<string> lines = new List<string>();
-
-            if (!File.Exists(path))
-            {
-                File.Create(path);
-            }
-            else
-            {
-                lines = File.ReadAllLines(path).ToList();
-            }
-            foreach (Control c in Controls)
-            {
-                Button b = c as Button;
-                if (b != null)
+                if (b is Button && String.IsNullOrEmpty(b.Text))
                 {
-                    b.Text = lines[i];
-                    i++;
-                    if (String.IsNullOrEmpty(b.Text))
-                    {
-                        b.Visible = false;
-                    }
+                    b.Visible = false;
                 }
-
-            }
+            }            
         }
-        /*--------------------------------------------------------*/
 
         /*----------------- Anuncios -----------------------------*/
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Clicked(object sender, EventArgs e)
         {
-            PlaySpot(@"C:\Users\Vitor\Downloads\Relvado disponivel.mp3");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            PlaySpot(@"C:\Users\Vitor\Downloads\Retoma de energia.mp3");
-        }
-        /*---------------------------------------------------------*/
+            string path;
+            Button triggeredButton = (Button)sender;            
+            path = (string)((Button)sender).Tag;
+            PlaySpot(path);           
+        }      
 
         public void PlaySpot(String Url)
         {
-            PlayPause();
+            Utility.PlayPause();
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
             wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
             wplayer.URL = Url;
@@ -134,7 +124,7 @@ namespace GesSpot
         {
             if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsMediaEnded)
             {
-                PlayPause();
+                Utility.PlayPause();
                 foreach (Control c in Controls)
                 {
                     Button b = c as Button;
@@ -145,5 +135,6 @@ namespace GesSpot
                 }
             }
         }
+        /*----------------------------------------------*/
     }
 }
