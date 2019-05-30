@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
+using System.Runtime.InteropServices;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace GesSpot
 {
     public partial class CriaAnuncio : Form
     {
         [System.ComponentModel.Browsable(false)]
-        public System.Windows.Forms.DialogResult DialogResult { get; set; }
-
+        string color;
         public CriaAnuncio()
         {
             InitializeComponent();
@@ -37,15 +40,36 @@ namespace GesSpot
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label5_Click_1(object sender, EventArgs e)
         {
-            ColorDialog cor = new ColorDialog();            
-
+            ColorDialog cor = new ColorDialog();
+            
             if
              (cor.ShowDialog() == DialogResult.OK)
             {
                 label5.BackColor = cor.Color;
+                color = cor.Color.ToArgb().ToString("x");
+                color = color.Substring(2, 6);
+                color = "#" + color;
+                label5.Text = color;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
+            SqlConnection con = new SqlConnection(source);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO ButtonProperties (ButtonID, ButtonText, ButtonColor, ButtonPath) 
+            VALUES 
+                (@ButtonID, @ButtonText, @ButtonColor, @ButtonPath)", con);
+            cmd.Parameters.AddWithValue("ButtonID", textBox3.Text);
+            cmd.Parameters.AddWithValue("ButtonText", textBox1.Text);
+            cmd.Parameters.AddWithValue("ButtonColor", label5.Text);
+            cmd.Parameters.AddWithValue("ButtonPath", textBox2.Text);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }        
     }
 }
