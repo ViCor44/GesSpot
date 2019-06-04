@@ -31,7 +31,13 @@ namespace GesSpot
         {
             CriaAnuncio frm = new CriaAnuncio();
             frm.ShowDialog();
-        }        
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Prog frm = new Prog();
+            frm.ShowDialog();
+        }
         /*-------------------Fechar Aplicação---------------------*/
         private void button4_Click(object sender, EventArgs e)
         {
@@ -50,6 +56,12 @@ namespace GesSpot
         {
             label1.Text = DateTime.Now.ToString("HH:mm");
             label2.Text = ": " + DateTime.Now.ToString("ss");
+            label3.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
         /*--------------------------------------------------------*/
 

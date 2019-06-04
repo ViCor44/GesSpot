@@ -28,9 +28,8 @@ namespace GesSpot
         }
         // Instancia os botões dos anuncios
         private void Form1_Load(object sender, EventArgs e)
-        {
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);            
+        {            
+            SqlConnection con = Utility.DataBaseConnection();            
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonProperties", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
