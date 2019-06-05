@@ -60,15 +60,19 @@ namespace GesSpot
             string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(source);
             con.Open();
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO ButtonProperties (ButtonID, ButtonText, ButtonColor, ButtonPath) 
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO ButtonSlideProperties (ButtonID, ButtonText, ButtonColor, ButtonPath) 
             VALUES 
                 (@ButtonID, @ButtonText, @ButtonColor, @ButtonPath)", con);
             cmd.Parameters.AddWithValue("ButtonID", textBox3.Text);
             cmd.Parameters.AddWithValue("ButtonText", textBox1.Text);
             cmd.Parameters.AddWithValue("ButtonColor", label5.Text);
             cmd.Parameters.AddWithValue("ButtonPath", textBox2.Text);
-            cmd.ExecuteNonQuery();
+            int i = cmd.ExecuteNonQuery();
             cmd.Dispose();
+            if (i != 0)
+                MessageBox.Show("Programa Salvo na Base de Dados");
+            else
+                MessageBox.Show("Erro ao salvar o programa");
             con.Close();
         }        
     }
