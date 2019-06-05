@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace GesSpot
 {
@@ -59,6 +60,41 @@ namespace GesSpot
                 return true;
             }
             return false;
+        }
+        // Conexão à base de dados
+        public static SqlConnection DataBaseConnection()
+        {
+            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
+            SqlConnection con = new SqlConnection(source);
+            return con;
+        }
+
+        public static void CreateButtonTable()
+        {
+            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("CREATE TABLE [dbo].['Button']("
+                                + "[buttonID] [int] NOT NULL,"
+                                + "[buttonText] [varchar](50) NOT NULL,"
+                                + "[buttonColor] [varchar](50) NOT NULL,"
+                                + "[buttonPath] [varchar](50) NOT NULL,"                                
+                                + "CONSTRAINT ['buttonID'] PRIMARY KEY CLUSTERED "
+                                + "("
+                                + "[buttonID] ASC"
+                                + ")WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]"
+                                + ") ON [PRIMARY]", new SqlConnection(source)))
+                {
+                    cmd.Connection.Open();
+                    cmd.ExecuteNonQuery();
+                    cmd.Connection.Close();
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
         }
     }
 }
