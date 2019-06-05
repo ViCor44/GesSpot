@@ -38,6 +38,12 @@ namespace GesSpot
             Prog frm = new Prog();
             frm.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Shows frm = new Shows();
+            frm.ShowDialog();
+        }
         /*-------------------Fechar Aplicação---------------------*/
         private void button4_Click(object sender, EventArgs e)
         {
@@ -63,6 +69,7 @@ namespace GesSpot
         {
 
         }
+
         /*--------------------------------------------------------*/
 
 

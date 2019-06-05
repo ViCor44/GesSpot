@@ -102,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shows.Designer.cs">
+      <DependentUpon>Shows.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Anuncios.resx">
       <DependentUpon>Anuncios.cs</DependentUpon>
@@ -124,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Shows.resx">
+      <DependentUpon>Shows.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="GesSpotDataSet.xsc">
       <DependentUpon>GesSpotDataSet.xsd</DependentUpon>
     </None>

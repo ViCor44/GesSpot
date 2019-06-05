@@ -13,30 +13,19 @@ using System.IO;
 using System.Data.SqlClient;
 namespace GesSpot
 {
-    public partial class Anuncios : Form
+    public partial class Shows : Form
     {
-        
-        
-              
 
-        
-
-        public Anuncios()
+        private void Shows_Load_1(object sender, EventArgs e)
         {
-            InitializeComponent();
-
-        }
-        // Instancia os botões dos anuncios
-        private void Form1_Load(object sender, EventArgs e)
-        {            
-            SqlConnection con = Utility.DataBaseConnection();            
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonSlideProperties", con);
+            SqlConnection con = Utility.DataBaseConnection();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonShowProperties", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             string myColor;
             string path;
             foreach (DataRow row in dt.Rows)
-            {                
+            {
 
                 switch (row["buttonID"].ToString().ToLower())
                 {
@@ -80,7 +69,7 @@ namespace GesSpot
                         button5.Tag = path;
                         button5.Click += new System.EventHandler(this.button_Clicked);
                         break;
-                }                
+                }
             }
             // botões não instanciados ficam invisiveis
             foreach (Control b in Controls)
@@ -89,17 +78,28 @@ namespace GesSpot
                 {
                     b.Visible = false;
                 }
-            }            
+            }
         }
+
+
+
+
+        public Shows()
+        {
+            InitializeComponent();
+
+        }
+        // Instancia os botões dos anuncios
+        
 
         /*----------------- Anuncios -----------------------------*/
         private void button_Clicked(object sender, EventArgs e)
         {
             string path;
-            Button triggeredButton = (Button)sender;            
+            Button triggeredButton = (Button)sender;
             path = (string)((Button)sender).Tag;
-            PlaySpot(path);           
-        }      
+            PlaySpot(path);
+        }
 
         public void PlaySpot(String Url)
         {
@@ -134,6 +134,8 @@ namespace GesSpot
                 }
             }
         }
+
+        
         /*----------------------------------------------*/
     }
 }

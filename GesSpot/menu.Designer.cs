@@ -110,6 +110,7 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "Anuncios Shows";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -118,7 +119,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(495, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 168);
+            this.label1.Size = new System.Drawing.Size(358, 134);
             this.label1.TabIndex = 6;
             this.label1.Text = "22:22";
             // 
@@ -129,7 +130,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(833, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 67);
+            this.label2.Size = new System.Drawing.Size(78, 55);
             this.label2.TabIndex = 7;
             this.label2.Text = "22";
             // 
@@ -156,12 +157,12 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(551, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 32);
+            this.label3.Size = new System.Drawing.Size(0, 26);
             this.label3.TabIndex = 9;
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1006, 721);
