@@ -10,15 +10,39 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Data.SqlClient;
+using System.Timers;
 
 namespace GesSpot
 {
     public partial class Menu : Form
     {
+        string anuncio;
+        System.Timers.Timer timer;
         public Menu()
         {
             InitializeComponent();
             this.FormClosing += Menu_FormClosing;
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'gesSpotDataSet15.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter1.Fill(this.gesSpotDataSet15.AberturaFecho);
+            // TODO: This line of code loads data into the 'gesSpotDataSet14.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter.Fill(this.gesSpotDataSet14.AberturaFecho);
+            label4.Visible = false;
+            label4.Text = "";
+            timer = new System.Timers.Timer();
+            timer.Enabled = true;
+            timer.Interval = 1000;
+            timer.Elapsed += Timer_Elapsed;
+
+        }
+
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,20 +82,131 @@ namespace GesSpot
         }
         /*--------------------------------------------------------*/
         /*--------------------------Clock-------------------------*/
-        private void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString("HH:mm");
-            label2.Text = ": " + DateTime.Now.ToString("ss");
+            label2.Text = ":" + DateTime.Now.ToString("ss");
             label3.Text = DateTime.Now.ToLongDateString();
+            DateTime current = DateTime.Now;
+            SqlConnection con = Utility.DataBaseConnection();
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Schedule", con);
+            SqlDataAdapter sdab = new SqlDataAdapter("SELECT * FROM AberturaFecho", con);
+            DataTable dt = new DataTable();
+            DataTable du = new DataTable();
+            sda.Fill(dt);
+            sdab.Fill(du);
+            foreach (DataRow r in du.Rows)
+            {
+                DateTime myclosetime, fifteen, ten, five, myopentime;
+                string closetime = r["fecho"].ToString();
+                string opentime = r["abertura"].ToString();
+                myclosetime = DateTime.Parse(closetime);
+                myopentime = DateTime.Parse(opentime);
+                fifteen = myclosetime.Add(new TimeSpan(0, -15, 0));
+                ten = myclosetime.Add(new TimeSpan(0, -10, 0));
+                five = myclosetime.Add(new TimeSpan(0, -5, 0));
+
+                if (myopentime.Hour == current.Hour && myopentime.Minute == current.Minute && myopentime.Second == current.Second)
+                {
+                    Utility.PlayPause();
+                }
+
+                if (fifteen.Hour == current.Hour && fifteen.Minute == current.Minute && fifteen.Second == current.Second)
+                {
+                    anuncio = "15 Minutos para Fecho";
+                    label4.Text = anuncio;
+                    PlayProg(r["anuncio15"].ToString());
+                }
+
+                if (ten.Hour == current.Hour && ten.Minute == current.Minute && ten.Second == current.Second)
+                {
+                    anuncio = "10 Minutos para Fecho";
+                    label4.Text = anuncio;
+                    PlayProg(r["anuncio10"].ToString());
+                }
+
+                if (five.Hour == current.Hour && five.Minute == current.Minute && five.Second == current.Second)
+                {
+                    anuncio = "5 Minutos para Fecho";
+                    label4.Text = anuncio;
+                    PlayProg(r["anuncio5"].ToString());
+                }
+
+                if (myclosetime.Hour == current.Hour && myclosetime.Minute == current.Minute && myclosetime.Second == current.Second)
+                {
+                    anuncio = "Fecho";
+                    label4.Text = anuncio;
+                    PlayProg(r["anuncioFecho"].ToString());                    
+                }
+                label8.Text = r["abertura"].ToString();
+                label9.Text = r["fecho"].ToString();
+            }
+                
+
+            foreach (DataRow row in dt.Rows)
+            {
+                
+                DateTime myTime;
+                string anTime = row["horario"].ToString();
+                string ficheiro = row["buttonPath"].ToString();
+                anuncio = row["buttonText"].ToString();
+                myTime = DateTime.Parse(anTime);
+                if (myTime.Hour == current.Hour && myTime.Minute == current.Minute && myTime.Second == current.Second)
+                {                    
+                    label4.Text = anuncio;
+                    PlayProg(ficheiro);                  
+                }                
+            }
         }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /*--------------------------------------------------------*/
 
+        public void PlayProg(string Url)
+        {
+            Utility.PlayPause();
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
+            wplayer.URL = Url;                   
+            wplayer.controls.play();            
+        }
 
+        private void Player_PlayStateChange(int NewState)
+        {
+            if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                label10.Visible = true;
+                label4.Visible = true;
+                //label4.Text = anuncio;
+
+                foreach (Control c in Controls)
+                {
+                    Button b = c as Button;
+                    if (b != null)
+                    {
+                        b.Enabled = true;
+                    }
+                }
+            }
+                if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                Utility.PlayPause();
+                label10.Visible = false;
+                label4.Visible = false;
+                label4.Text = "";
+                foreach (Control c in Controls)
+                {
+                    Button b = c as Button;
+                    if (b != null)
+                    {
+                        b.Enabled = true;
+                    }
+                }
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AberturaFecho frm = new AberturaFecho();
+            frm.ShowDialog();
+        }
     }
 }

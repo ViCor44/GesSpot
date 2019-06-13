@@ -19,7 +19,7 @@ namespace GesSpot
         private void Shows_Load_1(object sender, EventArgs e)
         {
             SqlConnection con = Utility.DataBaseConnection();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonShowProperties", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonAnuncioProperties WHERE tipo = 'Show'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             string myColor;
@@ -81,9 +81,6 @@ namespace GesSpot
             }
         }
 
-
-
-
         public Shows()
         {
             InitializeComponent();
@@ -101,7 +98,7 @@ namespace GesSpot
             PlaySpot(path);
         }
 
-        public void PlaySpot(String Url)
+        public void PlaySpot(string Url)
         {
             Utility.PlayPause();
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();

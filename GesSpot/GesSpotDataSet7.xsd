@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GesSpotDataSet7" targetNamespace="http://tempuri.org/GesSpotDataSet7.xsd" xmlns:mstns="http://tempuri.org/GesSpotDataSet7.xsd" xmlns="http://tempuri.org/GesSpotDataSet7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GesSpotConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GesSpotConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GesSpot.Properties.Settings.GlobalReference.Default.GesSpotConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ButtonAnuncioPropertiesTableAdapter" GeneratorDataComponentClassName="ButtonAnuncioPropertiesTableAdapter" Name="ButtonAnuncioProperties" UserDataComponentName="ButtonAnuncioPropertiesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GesSpotConnectionString (Settings)" DbObjectName="dbo.ButtonAnuncioProperties" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT buttonText, horário FROM dbo.ButtonAnuncioProperties</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="buttonText" DataSetColumn="buttonText" />
+              <Mapping SourceColumn="horário" DataSetColumn="horário" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GesSpotDataSet7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GesSpotDataSet7" msprop:Generator_UserDSName="GesSpotDataSet7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ButtonAnuncioProperties" msprop:Generator_TableClassName="ButtonAnuncioPropertiesDataTable" msprop:Generator_TableVarName="tableButtonAnuncioProperties" msprop:Generator_TablePropName="ButtonAnuncioProperties" msprop:Generator_RowDeletingName="ButtonAnuncioPropertiesRowDeleting" msprop:Generator_RowChangingName="ButtonAnuncioPropertiesRowChanging" msprop:Generator_RowEvHandlerName="ButtonAnuncioPropertiesRowChangeEventHandler" msprop:Generator_RowDeletedName="ButtonAnuncioPropertiesRowDeleted" msprop:Generator_UserTableName="ButtonAnuncioProperties" msprop:Generator_RowChangedName="ButtonAnuncioPropertiesRowChanged" msprop:Generator_RowEvArgName="ButtonAnuncioPropertiesRowChangeEvent" msprop:Generator_RowClassName="ButtonAnuncioPropertiesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="buttonText" msprop:Generator_ColumnVarNameInTable="columnbuttonText" msprop:Generator_ColumnPropNameInRow="buttonText" msprop:Generator_ColumnPropNameInTable="buttonTextColumn" msprop:Generator_UserColumnName="buttonText">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="horário" msprop:Generator_ColumnVarNameInTable="columnhorário" msprop:Generator_ColumnPropNameInRow="horário" msprop:Generator_ColumnPropNameInTable="horárioColumn" msprop:Generator_UserColumnName="horário" type="xs:duration" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
