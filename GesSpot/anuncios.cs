@@ -15,12 +15,6 @@ namespace GesSpot
 {
     public partial class Anuncios : Form
     {
-        
-        
-              
-
-        
-
         public Anuncios()
         {
             InitializeComponent();
@@ -30,7 +24,7 @@ namespace GesSpot
         private void Form1_Load(object sender, EventArgs e)
         {            
             SqlConnection con = Utility.DataBaseConnection();            
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonSlideProperties", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonAnuncioProperties WHERE tipo = 'Slide'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             string myColor;
@@ -101,7 +95,7 @@ namespace GesSpot
             PlaySpot(path);           
         }      
 
-        public void PlaySpot(String Url)
+        public void PlaySpot(string Url)
         {
             Utility.PlayPause();
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();

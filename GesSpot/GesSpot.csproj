@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AberturaFecho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AberturaFecho.Designer.cs">
+      <DependentUpon>AberturaFecho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Anuncios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,10 +89,100 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GesSpotDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GesSpotDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GesSpotDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GesSpotDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GesSpotDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesSpotDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -109,6 +205,9 @@
       <DependentUpon>Shows.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="AberturaFecho.resx">
+      <DependentUpon>AberturaFecho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Anuncios.resx">
       <DependentUpon>Anuncios.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +254,116 @@
     <None Include="GesSpotDataSet1.xss">
       <DependentUpon>GesSpotDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="GesSpotDataSet10.xsc">
+      <DependentUpon>GesSpotDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet10.xss">
+      <DependentUpon>GesSpotDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet11.xsc">
+      <DependentUpon>GesSpotDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet11.xss">
+      <DependentUpon>GesSpotDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet12.xsc">
+      <DependentUpon>GesSpotDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet12.xss">
+      <DependentUpon>GesSpotDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet13.xsc">
+      <DependentUpon>GesSpotDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet13.xss">
+      <DependentUpon>GesSpotDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet14.xsc">
+      <DependentUpon>GesSpotDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet14.xss">
+      <DependentUpon>GesSpotDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet15.xsc">
+      <DependentUpon>GesSpotDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet15.xss">
+      <DependentUpon>GesSpotDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet16.xsc">
+      <DependentUpon>GesSpotDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet16.xss">
+      <DependentUpon>GesSpotDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet17.xsc">
+      <DependentUpon>GesSpotDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet17.xss">
+      <DependentUpon>GesSpotDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet18.xsc">
+      <DependentUpon>GesSpotDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet18.xss">
+      <DependentUpon>GesSpotDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet19.xsc">
+      <DependentUpon>GesSpotDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet19.xss">
+      <DependentUpon>GesSpotDataSet19.xsd</DependentUpon>
+    </None>
     <None Include="GesSpotDataSet2.xsc">
       <DependentUpon>GesSpotDataSet2.xsd</DependentUpon>
     </None>
@@ -165,6 +374,94 @@
     </None>
     <None Include="GesSpotDataSet2.xss">
       <DependentUpon>GesSpotDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet20.xsc">
+      <DependentUpon>GesSpotDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet20.xss">
+      <DependentUpon>GesSpotDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet3.xsc">
+      <DependentUpon>GesSpotDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet3.xss">
+      <DependentUpon>GesSpotDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet4.xsc">
+      <DependentUpon>GesSpotDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet4.xss">
+      <DependentUpon>GesSpotDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet5.xsc">
+      <DependentUpon>GesSpotDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet5.xss">
+      <DependentUpon>GesSpotDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet6.xsc">
+      <DependentUpon>GesSpotDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet6.xss">
+      <DependentUpon>GesSpotDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet7.xsc">
+      <DependentUpon>GesSpotDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet7.xss">
+      <DependentUpon>GesSpotDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet8.xsc">
+      <DependentUpon>GesSpotDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet8.xss">
+      <DependentUpon>GesSpotDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet9.xsc">
+      <DependentUpon>GesSpotDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="GesSpotDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesSpotDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesSpotDataSet9.xss">
+      <DependentUpon>GesSpotDataSet9.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
