@@ -22,18 +22,17 @@ namespace GesSpot
 
         private void AberturaFecho_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gesSpotDataSet20.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter5.Fill(this.gesSpotDataSet20.AberturaFecho);
-            // TODO: This line of code loads data into the 'gesSpotDataSet19.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter4.Fill(this.gesSpotDataSet19.AberturaFecho);
-            // TODO: This line of code loads data into the 'gesSpotDataSet18.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter3.Fill(this.gesSpotDataSet18.AberturaFecho);
-            // TODO: This line of code loads data into the 'gesSpotDataSet17.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter2.Fill(this.gesSpotDataSet17.AberturaFecho);
-            // TODO: This line of code loads data into the 'gesSpotDataSet16.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter1.Fill(this.gesSpotDataSet16.AberturaFecho);
-            // TODO: This line of code loads data into the 'gesSpotDataSet13.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter.Fill(this.gesSpotDataSet13.AberturaFecho);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet6.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter11.Fill(this.gesAnunciosDataSet6.AberturaFecho);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet5.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter10.Fill(this.gesAnunciosDataSet5.AberturaFecho);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet4.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter9.Fill(this.gesAnunciosDataSet4.AberturaFecho);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet3.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter8.Fill(this.gesAnunciosDataSet3.AberturaFecho);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet2.AberturaFecho' table. You can move, or remove it, as needed.
+            this.aberturaFechoTableAdapter7.Fill(this.gesAnunciosDataSet2.AberturaFecho);
+
 
         }
 
@@ -43,12 +42,10 @@ namespace GesSpot
             abertura = abertura.Substring(11);
             string fecho = dateTimePicker2.Value.ToString();
             fecho = fecho.Substring(11);
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);
+            SqlConnection con = Utility.DataBaseConnection();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "UPDATE AberturaFecho SET abertura = @abertura, fecho = @fecho, anuncio15 = @anuncio15, anuncio10 = @anuncio10, anuncio5 = @anuncio5, anuncioFecho = @anuncioFecho WHERE Id = 1";
-            //cmd.Parameters.AddWithValue("ButtonID", textBox3.Text);
+            cmd.CommandText = "UPDATE AberturaFecho SET abertura = @abertura, fecho = @fecho, anuncio15 = @anuncio15, anuncio10 = @anuncio10, anuncio5 = @anuncio5, anuncioFecho = @anuncioFecho WHERE Id = 1";            
             cmd.Parameters.AddWithValue("abertura", abertura);
             cmd.Parameters.AddWithValue("fecho", fecho);
             cmd.Parameters.AddWithValue("anuncio15", comboBox1.Text);
@@ -70,8 +67,7 @@ namespace GesSpot
         public void GridDataView()
         {
             dataGridView1.DefaultCellStyle.Font = new Font("Arial", 15);
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);
+            SqlConnection con = Utility.DataBaseConnection();
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT abertura, fecho FROM AberturaFecho", con);
             DataSet ds = new DataSet();
@@ -122,11 +118,15 @@ namespace GesSpot
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Media Files|*.mp3";
 
-            if
-             (dialog.ShowDialog() == DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 comboBox4.Text = dialog.FileName;
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

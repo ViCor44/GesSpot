@@ -16,6 +16,7 @@ namespace GesSpot
 {
     public partial class Prog : Form
     {
+        bool ligado;
         public Prog()
         {
             InitializeComponent();
@@ -23,10 +24,11 @@ namespace GesSpot
 
         private void Prog_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gesSpotDataSet9.ButtonAnuncioProperties' table. You can move, or remove it, as needed.
-            this.buttonAnuncioPropertiesTableAdapter2.Fill(this.gesSpotDataSet9.ButtonAnuncioProperties);
-            // TODO: This line of code loads data into the 'gesSpotDataSet8.Schedule' table. You can move, or remove it, as needed.
-            this.scheduleTableAdapter.Fill(this.gesSpotDataSet8.Schedule);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet8.Schedule' table. You can move, or remove it, as needed.
+            this.scheduleTableAdapter5.Fill(this.gesAnunciosDataSet8.Schedule);
+            // TODO: This line of code loads data into the 'gesAnunciosDataSet7.Schedule' table. You can move, or remove it, as needed.
+            this.scheduleTableAdapter4.Fill(this.gesAnunciosDataSet7.Schedule);
+
             GridDataView();
         }
 
@@ -37,15 +39,14 @@ namespace GesSpot
         
         public void GridDataView()
         {
-            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 15);
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);
+            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 11);
+            SqlConnection con = Utility.DataBaseConnection();
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT horario, buttonText FROM Schedule", con);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Id, horario, buttonText, ligado FROM Schedule", con);
             DataSet ds = new DataSet();
-            da.Fill(ds, "ButtonAnuncioProperties");
+            da.Fill(ds, "Schedule");
             dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = "ButtonAnuncioProperties";
+            dataGridView1.DataMember = "Schedule";
             con.Close();
         }
 
@@ -53,15 +54,21 @@ namespace GesSpot
         {
             string time = dateTimePicker1.Value.ToString();
             time = time.Substring(11);
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);
+           
+            if (radioButton1.Checked)
+                ligado = true;
+            if (radioButton2.Checked)
+                ligado = false;
+
+            SqlConnection con = Utility.DataBaseConnection();
             con.Open();
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO Schedule (horario, buttonText, buttonPath) 
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO Schedule (horario, buttonText, buttonPath, ligado) 
             VALUES 
-                (@horario, @buttonText, @buttonPath)", con);
+                (@horario, @buttonText, @buttonPath, @ligado)", con);
             cmd.Parameters.AddWithValue("horario", time);
             cmd.Parameters.AddWithValue("buttonText", comboBox1.Text);
             cmd.Parameters.AddWithValue("buttonPath", textBox2.Text);
+            cmd.Parameters.AddWithValue("ligado", ligado);
             int i = cmd.ExecuteNonQuery();
             cmd.Dispose();
             if (i != 0)
@@ -84,52 +91,66 @@ namespace GesSpot
                 textBox2.Text = dialog.FileName;
             }
         }
-
-        /*private void button3_Click(object sender, EventArgs e)
-        {
-            string time = dateTimePicker1.Value.ToString();
-            time = time.Substring(11);
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.CommandText = "UPDATE Schedule SET horario = @horario, buttonText = @buttonText, buttonPath = @buttonPath WHERE horario = @horario" ;
-            //cmd.Parameters.AddWithValue("ButtonID", textBox3.Text);
-            cmd.Parameters.AddWithValue("ButtonText", comboBox1.Text);            
-            cmd.Parameters.AddWithValue("ButtonPath", textBox2.Text);
-            cmd.Parameters.AddWithValue("horario", time);
-            con.Open();
-            cmd.Connection = con;
-            int i = cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            if (i != 0)
-                MessageBox.Show("Programa Alterado na Base de Dados");
-            else
-                MessageBox.Show("Erro ao salvar o anuncio");
-            con.Close();
-            GridDataView();
-        }*/
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
             string time = dateTimePicker1.Value.ToString();
             time = time.Substring(11);
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source);
+            SqlConnection con = Utility.DataBaseConnection();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "DELETE FROM Schedule  WHERE horario = @horario";           
+            cmd.CommandText = "DELETE FROM Schedule  WHERE Id = " + textBox1.Text;           
             cmd.Parameters.AddWithValue("horario", time);
             con.Open();
             cmd.Connection = con;
             int i = cmd.ExecuteNonQuery();
             cmd.Dispose();
             if (i != 0)
-                MessageBox.Show("Programa Alterado na Base de Dados");
+                MessageBox.Show("Programa Apagado na Base de Dados");
             else
-                MessageBox.Show("Erro ao salvar o anuncio");
+                MessageBox.Show("Erro ao apagar o programa");
             con.Close();
             GridDataView();      
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Enabled)
+                textBox1.Enabled = false;
+            else
+                textBox1.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string time = dateTimePicker1.Value.ToString();
+            time = time.Substring(11);
+
+            if (radioButton1.Checked)
+                ligado = true;
+            if (radioButton2.Checked)
+                ligado = false;
+
+            SqlConnection con = Utility.DataBaseConnection();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "UPDATE Schedule SET buttonText = @buttonText, horario = @horario, buttonPath = @buttonPath, ligado = @ligado Where  Id = " + textBox1.Text;
+
+            cmd.Parameters.AddWithValue("horario", time);
+            cmd.Parameters.AddWithValue("buttonText", comboBox1.Text);
+            cmd.Parameters.AddWithValue("buttonPath", textBox2.Text);
+            cmd.Parameters.AddWithValue("ligado", ligado);
+            con.Open();
+            cmd.Connection = con;
+            int i = cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            if (i != 0)
+                MessageBox.Show("Programa alterado na Base de Dados");
+            else
+                MessageBox.Show("Erro ao alterar o programa");
+            con.Close();
+            GridDataView();
         }
     }
 }

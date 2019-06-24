@@ -33,5 +33,16 @@ namespace GesSpot.Properties {
                 return ((string)(this["GesSpotConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GesAnuncios;Integrated Securit" +
+            "y=True")]
+        public string GesAnunciosConnectionString {
+            get {
+                return ((string)(this["GesAnunciosConnectionString"]));
+            }
+        }
     }
 }

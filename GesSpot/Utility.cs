@@ -64,14 +64,14 @@ namespace GesSpot
         // Conexão à base de dados
         public static SqlConnection DataBaseConnection()
         {
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
+            string source = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GesAnuncios;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection con = new SqlConnection(source);
             return con;
         }
 
         public static void CreateButtonTable()
         {
-            string source = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\GesSpot\GesSpot.mdf;Integrated Security=True";
+            string source = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GesAnuncios;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             try
             {
