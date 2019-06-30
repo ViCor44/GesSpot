@@ -10,18 +10,19 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 using System.Timers;
 
 namespace GesSpot
 {
     public partial class Menu : Form
     {
-        string anuncio;        
+        string anuncio;
         public Menu()
         {
             InitializeComponent();
             this.FormClosing += Menu_FormClosing;
+           
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace GesSpot
 
             label4.Visible = false;
             label4.Text = "";
+           
         }    
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,9 +77,9 @@ namespace GesSpot
             label2.Text = ":" + DateTime.Now.ToString("ss");
             label3.Text = DateTime.Now.ToLongDateString();
             DateTime current = DateTime.Now;
-            SqlConnection con = Utility.DataBaseConnection();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Schedule", con);
-            SqlDataAdapter sdab = new SqlDataAdapter("SELECT * FROM AberturaFecho", con);
+            SqlCeConnection con = Utility.DataBaseConnection();
+            SqlCeDataAdapter sda = new SqlCeDataAdapter("SELECT * FROM Schedule", con);
+            SqlCeDataAdapter sdab = new SqlCeDataAdapter("SELECT * FROM AberturaFecho", con);
             DataTable dt = new DataTable();
             DataTable du = new DataTable();
             sda.Fill(dt);
@@ -125,8 +127,12 @@ namespace GesSpot
                     label4.Text = anuncio;
                     PlayProg(r["anuncioFecho"].ToString());                    
                 }
-                label8.Text = r["abertura"].ToString();
-                label9.Text = r["fecho"].ToString();
+                string abertura = r["abertura"].ToString();
+                abertura = abertura.Substring(11);
+                string fecho = r["fecho"].ToString();
+                fecho = fecho.Substring(11);
+                label8.Text = abertura;
+                label9.Text = fecho;
             }
                 
 
@@ -153,27 +159,31 @@ namespace GesSpot
         public void PlayProg(string Url)
         {
             Utility.PlayPause();
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();                        
-            wplayer.URL = Url;                   
-            wplayer.controls.play();
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
             wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_Player_PlayStateChange);
+            wplayer.URL = Url;
+            //string i = wplayer.currentMedia.durationString;            
+            wplayer.controls.play();
+            
                         
         }
 
         private void wplayer_Player_PlayStateChange(int NewState)
         {
-            if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsPlaying)
+            if (NewState == 1 || NewState == 8)
+            //if (NewState != 3)
+                {
+                Utility.PlayPause();
+                label10.Visible = false;
+                label4.Visible = false;
+                //label4.Text = "";
+            }
+
+            if (NewState == 3)
             {
                 label10.Visible = true;
                 label4.Visible = true;
                
-            }
-                if (NewState == 8)
-            {
-                Utility.PlayPause();
-                label10.Visible = false;
-                label4.Visible = false;
-                label4.Text = "";               
             }
         }
 
@@ -186,6 +196,6 @@ namespace GesSpot
         private void label11_Click(object sender, EventArgs e)
         {
 
-        }
+        }        
     }
 }

@@ -59,5 +59,15 @@ namespace GesSpot.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] anuncios {
+            get {
+                object obj = ResourceManager.GetObject("anuncios", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

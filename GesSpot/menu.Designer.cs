@@ -54,7 +54,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet15)).BeginInit();
@@ -198,7 +197,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.GhostWhite;
             this.label5.Location = new System.Drawing.Point(383, 358);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -299,21 +298,12 @@
             this.label11.TabIndex = 19;
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(393, 648);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(348, 31);
-            this.progressBar1.TabIndex = 20;
-            this.progressBar1.Value = 10;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1238, 691);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -374,6 +364,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

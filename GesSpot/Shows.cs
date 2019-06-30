@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 namespace GesSpot
 {
     public partial class Shows : Form
@@ -18,8 +18,8 @@ namespace GesSpot
 
         private void Shows_Load_1(object sender, EventArgs e)
         {
-            SqlConnection con = Utility.DataBaseConnection();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonAnuncioProperties WHERE tipo = 'Show'", con);
+            SqlCeConnection con = Utility.DataBaseConnection();
+            SqlCeDataAdapter sda = new SqlCeDataAdapter("SELECT * FROM ButtonAnuncioProperties WHERE tipo = 'Show'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             string myColor;
@@ -303,7 +303,7 @@ namespace GesSpot
 
         private void Player_PlayStateChange(int NewState)
         {
-            if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsMediaEnded)
+            if (NewState == 1 || NewState == 8)
             {
                 Utility.PlayPause();
                 foreach (Control c in Controls)

@@ -55,26 +55,32 @@
             this.gesSpotDataSet11 = new GesSpot.GesSpotDataSet11();
             this.buttonAnuncioPropertiesTableAdapter1 = new GesSpot.GesSpotDataSet11TableAdapters.ButtonAnuncioPropertiesTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAnuncioPropertiesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.gesAnunciosDataSet1 = new GesSpot.GesAnunciosDataSet1();
             this.buttonAnuncioPropertiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.gesSpotDataSet12 = new GesSpot.GesSpotDataSet12();
             this.buttonAnuncioPropertiesTableAdapter2 = new GesSpot.GesSpotDataSet12TableAdapters.ButtonAnuncioPropertiesTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gesAnunciosDataSet1 = new GesSpot.GesAnunciosDataSet1();
-            this.buttonAnuncioPropertiesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.buttonAnuncioPropertiesTableAdapter3 = new GesSpot.GesAnunciosDataSet1TableAdapters.ButtonAnuncioPropertiesTableAdapter();
+            this.gesAnunciosDataSet9 = new GesSpot.GesAnunciosDataSet9();
+            this.buttonAnuncioPropertiesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAnuncioPropertiesTableAdapter4 = new GesSpot.GesAnunciosDataSet9TableAdapters.ButtonAnuncioPropertiesTableAdapter();
+            this.buttonID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -272,32 +278,26 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.buttonID,
             this.buttonTextDataGridViewTextBoxColumn,
             this.tipoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.buttonAnuncioPropertiesBindingSource3;
+            this.dataGridView1.DataSource = this.buttonAnuncioPropertiesBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(499, 36);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.Size = new System.Drawing.Size(405, 345);
             this.dataGridView1.TabIndex = 23;
             // 
-            // buttonTextDataGridViewTextBoxColumn
+            // buttonAnuncioPropertiesBindingSource3
             // 
-            this.buttonTextDataGridViewTextBoxColumn.DataPropertyName = "buttonText";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.buttonTextDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.buttonTextDataGridViewTextBoxColumn.HeaderText = "Anuncio";
-            this.buttonTextDataGridViewTextBoxColumn.Name = "buttonTextDataGridViewTextBoxColumn";
-            this.buttonTextDataGridViewTextBoxColumn.Width = 86;
+            this.buttonAnuncioPropertiesBindingSource3.DataMember = "ButtonAnuncioProperties";
+            this.buttonAnuncioPropertiesBindingSource3.DataSource = this.gesAnunciosDataSet1;
             // 
-            // tipoDataGridViewTextBoxColumn
+            // gesAnunciosDataSet1
             // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.Width = 62;
+            this.gesAnunciosDataSet1.DataSetName = "GesAnunciosDataSet1";
+            this.gesAnunciosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonAnuncioPropertiesBindingSource2
             // 
@@ -340,19 +340,51 @@
             this.textBox1.Size = new System.Drawing.Size(406, 24);
             this.textBox1.TabIndex = 26;
             // 
-            // gesAnunciosDataSet1
-            // 
-            this.gesAnunciosDataSet1.DataSetName = "GesAnunciosDataSet1";
-            this.gesAnunciosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // buttonAnuncioPropertiesBindingSource3
-            // 
-            this.buttonAnuncioPropertiesBindingSource3.DataMember = "ButtonAnuncioProperties";
-            this.buttonAnuncioPropertiesBindingSource3.DataSource = this.gesAnunciosDataSet1;
-            // 
             // buttonAnuncioPropertiesTableAdapter3
             // 
             this.buttonAnuncioPropertiesTableAdapter3.ClearBeforeFill = true;
+            // 
+            // gesAnunciosDataSet9
+            // 
+            this.gesAnunciosDataSet9.DataSetName = "GesAnunciosDataSet9";
+            this.gesAnunciosDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonAnuncioPropertiesBindingSource4
+            // 
+            this.buttonAnuncioPropertiesBindingSource4.DataMember = "ButtonAnuncioProperties";
+            this.buttonAnuncioPropertiesBindingSource4.DataSource = this.gesAnunciosDataSet9;
+            // 
+            // buttonAnuncioPropertiesTableAdapter4
+            // 
+            this.buttonAnuncioPropertiesTableAdapter4.ClearBeforeFill = true;
+            // 
+            // buttonID
+            // 
+            this.buttonID.DataPropertyName = "buttonID";
+            this.buttonID.HeaderText = "ID";
+            this.buttonID.Name = "buttonID";
+            this.buttonID.ReadOnly = true;
+            this.buttonID.Width = 47;
+            // 
+            // buttonTextDataGridViewTextBoxColumn
+            // 
+            this.buttonTextDataGridViewTextBoxColumn.DataPropertyName = "buttonText";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.buttonTextDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.buttonTextDataGridViewTextBoxColumn.HeaderText = "Anuncio";
+            this.buttonTextDataGridViewTextBoxColumn.Name = "buttonTextDataGridViewTextBoxColumn";
+            this.buttonTextDataGridViewTextBoxColumn.ReadOnly = true;
+            this.buttonTextDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.tipoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoDataGridViewTextBoxColumn.Width = 62;
             // 
             // CriaAnuncio
             // 
@@ -389,10 +421,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,13 +460,17 @@
         private GesSpotDataSet12 gesSpotDataSet12;
         private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource2;
         private GesSpotDataSet12TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn buttonTextDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
         private GesAnunciosDataSet1 gesAnunciosDataSet1;
         private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource3;
         private GesAnunciosDataSet1TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter3;
+        private GesAnunciosDataSet9 gesAnunciosDataSet9;
+        private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource4;
+        private GesAnunciosDataSet9TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buttonID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buttonTextDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
     }
 }

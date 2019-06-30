@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 namespace GesSpot
 {
     public partial class Anuncios : Form
@@ -23,8 +23,8 @@ namespace GesSpot
         // Instancia os botões dos anuncios
         private void Form1_Load(object sender, EventArgs e)
         {            
-            SqlConnection con = Utility.DataBaseConnection();            
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM ButtonAnuncioProperties WHERE tipo = 'Slide'", con);
+            SqlCeConnection con = Utility.DataBaseConnection();            
+            SqlCeDataAdapter sda = new SqlCeDataAdapter("SELECT * FROM ButtonAnuncioProperties WHERE tipo = 'Slide'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             string myColor;
@@ -284,6 +284,7 @@ namespace GesSpot
         {
             Utility.PlayPause();
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.PlayStateChange += new _WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
             wplayer.URL = Url;
             // Desliga todos os botoes
             foreach (Control c in Controls)
@@ -295,13 +296,14 @@ namespace GesSpot
                 }
             }
             wplayer.controls.play();
-            wplayer.PlayStateChange += new _WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
+           
 
         }
 
         private void Player_PlayStateChange(int NewState)
         {
-            if (NewState == 1)
+            //if (NewState == 1 || NewState == 8)
+            if (NewState != 3)
             {
                 Utility.PlayPause();
                 foreach (Control c in Controls)

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 
 namespace GesSpot
 {
@@ -24,10 +24,6 @@ namespace GesSpot
 
         private void Prog_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gesAnunciosDataSet8.Schedule' table. You can move, or remove it, as needed.
-            this.scheduleTableAdapter5.Fill(this.gesAnunciosDataSet8.Schedule);
-            // TODO: This line of code loads data into the 'gesAnunciosDataSet7.Schedule' table. You can move, or remove it, as needed.
-            this.scheduleTableAdapter4.Fill(this.gesAnunciosDataSet7.Schedule);
 
             GridDataView();
         }
@@ -40,9 +36,9 @@ namespace GesSpot
         public void GridDataView()
         {
             dataGridView1.DefaultCellStyle.Font = new Font("Arial", 11);
-            SqlConnection con = Utility.DataBaseConnection();
+            SqlCeConnection con = Utility.DataBaseConnection();
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Id, horario, buttonText, ligado FROM Schedule", con);
+            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, horario, buttonText, ligado FROM Schedule", con);
             DataSet ds = new DataSet();
             da.Fill(ds, "Schedule");
             dataGridView1.DataSource = ds;
@@ -60,9 +56,9 @@ namespace GesSpot
             if (radioButton2.Checked)
                 ligado = false;
 
-            SqlConnection con = Utility.DataBaseConnection();
+            SqlCeConnection con = Utility.DataBaseConnection();
             con.Open();
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO Schedule (horario, buttonText, buttonPath, ligado) 
+            SqlCeCommand cmd = new SqlCeCommand(@"INSERT INTO Schedule (horario, buttonText, buttonPath, ligado) 
             VALUES 
                 (@horario, @buttonText, @buttonPath, @ligado)", con);
             cmd.Parameters.AddWithValue("horario", time);
@@ -97,8 +93,8 @@ namespace GesSpot
         {
             string time = dateTimePicker1.Value.ToString();
             time = time.Substring(11);
-            SqlConnection con = Utility.DataBaseConnection();
-            SqlCommand cmd = new SqlCommand();
+            SqlCeConnection con = Utility.DataBaseConnection();
+            SqlCeCommand cmd = new SqlCeCommand();
 
             cmd.CommandText = "DELETE FROM Schedule  WHERE Id = " + textBox1.Text;           
             cmd.Parameters.AddWithValue("horario", time);
@@ -132,8 +128,8 @@ namespace GesSpot
             if (radioButton2.Checked)
                 ligado = false;
 
-            SqlConnection con = Utility.DataBaseConnection();
-            SqlCommand cmd = new SqlCommand();
+            SqlCeConnection con = Utility.DataBaseConnection();
+            SqlCeCommand cmd = new SqlCeCommand();
 
             cmd.CommandText = "UPDATE Schedule SET buttonText = @buttonText, horario = @horario, buttonPath = @buttonPath, ligado = @ligado Where  Id = " + textBox1.Text;
 

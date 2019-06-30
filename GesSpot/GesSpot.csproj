@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GesAnunciosDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GesAnunciosDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GesAnunciosDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GesSpotDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -404,6 +409,17 @@
     </None>
     <None Include="GesAnunciosDataSet8.xss">
       <DependentUpon>GesAnunciosDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GesAnunciosDataSet9.xsc">
+      <DependentUpon>GesAnunciosDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="GesAnunciosDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GesAnunciosDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GesAnunciosDataSet9.xss">
+      <DependentUpon>GesAnunciosDataSet9.xsd</DependentUpon>
     </None>
     <None Include="GesSpotDataSet.xsc">
       <DependentUpon>GesSpotDataSet.xsd</DependentUpon>
@@ -703,6 +719,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\anuncios.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="GesSpot.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -725,6 +744,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
