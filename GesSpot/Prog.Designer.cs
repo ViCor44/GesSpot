@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.gesSpotDataSet1 = new GesSpot.GesSpotDataSet1();
             this.buttonPropertiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -49,9 +49,6 @@
             this.gesSpotDataSet3 = new GesSpot.GesSpotDataSet3();
             this.progHorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.progHorTableAdapter1 = new GesSpot.GesSpotDataSet3TableAdapters.ProgHorTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gesSpotDataSet8 = new GesSpot.GesSpotDataSet8();
             this.buttonAnuncioPropertiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -68,12 +65,38 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.scheduleBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.gesAnunciosDataSet8 = new GesSpot.GesAnunciosDataSet8();
+            this.scheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gesSpotDataSet21 = new GesSpot.GesSpotDataSet21();
             this.buttonAnuncioPropertiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.gesSpotDataSet9 = new GesSpot.GesSpotDataSet9();
             this.buttonAnuncioPropertiesTableAdapter2 = new GesSpot.GesSpotDataSet9TableAdapters.ButtonAnuncioPropertiesTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.scheduleTableAdapter1 = new GesSpot.GesSpotDataSet21TableAdapters.ScheduleTableAdapter();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.scheduleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.gesSpotDataSet22 = new GesSpot.GesSpotDataSet22();
+            this.scheduleTableAdapter2 = new GesSpot.GesSpotDataSet22TableAdapters.ScheduleTableAdapter();
+            this.gesSpotDataSet10 = new GesSpot.GesSpotDataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.scheduleBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.gesAnunciosDataSet7 = new GesSpot.GesAnunciosDataSet7();
+            this.scheduleBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.gesSpotDataSet23 = new GesSpot.GesSpotDataSet23();
+            this.scheduleTableAdapter3 = new GesSpot.GesSpotDataSet23TableAdapters.ScheduleTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.scheduleTableAdapter4 = new GesSpot.GesAnunciosDataSet7TableAdapters.ScheduleTableAdapter();
+            this.scheduleTableAdapter5 = new GesSpot.GesAnunciosDataSet8TableAdapters.ScheduleTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ligadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPropertiesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource)).BeginInit();
@@ -85,15 +108,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet23)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -207,65 +241,6 @@
             // 
             this.progHorTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.buttonTextDataGridViewTextBoxColumn,
-            this.horario});
-            this.dataGridView1.DataSource = this.scheduleBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(520, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 299);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // buttonTextDataGridViewTextBoxColumn
-            // 
-            this.buttonTextDataGridViewTextBoxColumn.DataPropertyName = "buttonText";
-            this.buttonTextDataGridViewTextBoxColumn.HeaderText = "Anuncio";
-            this.buttonTextDataGridViewTextBoxColumn.Name = "buttonTextDataGridViewTextBoxColumn";
-            this.buttonTextDataGridViewTextBoxColumn.ReadOnly = true;
-            this.buttonTextDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // horario
-            // 
-            this.horario.DataPropertyName = "horario";
-            this.horario.HeaderText = "Horário";
-            this.horario.Name = "horario";
-            this.horario.ReadOnly = true;
-            this.horario.Width = 86;
-            // 
             // scheduleBindingSource
             // 
             this.scheduleBindingSource.DataMember = "Schedule";
@@ -359,7 +334,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.buttonAnuncioPropertiesBindingSource2;
+            this.comboBox1.DataSource = this.scheduleBindingSource5;
             this.comboBox1.DisplayMember = "buttonText";
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
@@ -367,6 +342,26 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(173, 24);
             this.comboBox1.TabIndex = 11;
+            // 
+            // scheduleBindingSource5
+            // 
+            this.scheduleBindingSource5.DataMember = "Schedule";
+            this.scheduleBindingSource5.DataSource = this.gesAnunciosDataSet8;
+            // 
+            // gesAnunciosDataSet8
+            // 
+            this.gesAnunciosDataSet8.DataSetName = "GesAnunciosDataSet8";
+            this.gesAnunciosDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleBindingSource1
+            // 
+            this.scheduleBindingSource1.DataMember = "Schedule";
+            this.scheduleBindingSource1.DataSource = this.gesSpotDataSet21;
+            // 
+            // gesSpotDataSet21
+            // 
+            this.gesSpotDataSet21.DataSetName = "GesSpotDataSet21";
+            this.gesSpotDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonAnuncioPropertiesBindingSource2
             // 
@@ -391,7 +386,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(516, 29);
+            this.label5.Location = new System.Drawing.Point(488, 22);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 20);
@@ -401,7 +396,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(168, 301);
+            this.button4.Location = new System.Drawing.Point(333, 302);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(153, 56);
@@ -410,19 +405,200 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // scheduleTableAdapter1
+            // 
+            this.scheduleTableAdapter1.ClearBeforeFill = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(190, 229);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.TabIndex = 16;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Ligado";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.Color.White;
+            this.radioButton2.Location = new System.Drawing.Point(250, 229);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(72, 17);
+            this.radioButton2.TabIndex = 17;
+            this.radioButton2.Text = "Desligado";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // scheduleBindingSource2
+            // 
+            this.scheduleBindingSource2.DataMember = "Schedule";
+            this.scheduleBindingSource2.DataSource = this.gesSpotDataSet22;
+            // 
+            // gesSpotDataSet22
+            // 
+            this.gesSpotDataSet22.DataSetName = "GesSpotDataSet22";
+            this.gesSpotDataSet22.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleTableAdapter2
+            // 
+            this.scheduleTableAdapter2.ClearBeforeFill = true;
+            // 
+            // gesSpotDataSet10
+            // 
+            this.gesSpotDataSet10.DataSetName = "GesSpotDataSet";
+            this.gesSpotDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.buttonTextDataGridViewTextBoxColumn,
+            this.horarioDataGridViewTextBoxColumn,
+            this.ligadoDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.scheduleBindingSource4;
+            this.dataGridView1.Location = new System.Drawing.Point(492, 45);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(390, 186);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // scheduleBindingSource4
+            // 
+            this.scheduleBindingSource4.DataMember = "Schedule";
+            this.scheduleBindingSource4.DataSource = this.gesAnunciosDataSet7;
+            // 
+            // gesAnunciosDataSet7
+            // 
+            this.gesAnunciosDataSet7.DataSetName = "GesAnunciosDataSet7";
+            this.gesAnunciosDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleBindingSource3
+            // 
+            this.scheduleBindingSource3.DataMember = "Schedule";
+            this.scheduleBindingSource3.DataSource = this.gesSpotDataSet23;
+            // 
+            // gesSpotDataSet23
+            // 
+            this.gesSpotDataSet23.DataSetName = "GesSpotDataSet23";
+            this.gesSpotDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleTableAdapter3
+            // 
+            this.scheduleTableAdapter3.ClearBeforeFill = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(247, 67);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Id";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(250, 97);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(40, 22);
+            this.textBox1.TabIndex = 20;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(168, 301);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(153, 56);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Alterar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // scheduleTableAdapter4
+            // 
+            this.scheduleTableAdapter4.ClearBeforeFill = true;
+            // 
+            // scheduleTableAdapter5
+            // 
+            this.scheduleTableAdapter5.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 41;
+            // 
+            // buttonTextDataGridViewTextBoxColumn
+            // 
+            this.buttonTextDataGridViewTextBoxColumn.DataPropertyName = "buttonText";
+            this.buttonTextDataGridViewTextBoxColumn.HeaderText = "Anuncio";
+            this.buttonTextDataGridViewTextBoxColumn.Name = "buttonTextDataGridViewTextBoxColumn";
+            this.buttonTextDataGridViewTextBoxColumn.ReadOnly = true;
+            this.buttonTextDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // horarioDataGridViewTextBoxColumn
+            // 
+            this.horarioDataGridViewTextBoxColumn.DataPropertyName = "horario";
+            dataGridViewCellStyle2.Format = "T";
+            dataGridViewCellStyle2.NullValue = null;
+            this.horarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.horarioDataGridViewTextBoxColumn.HeaderText = "Horario";
+            this.horarioDataGridViewTextBoxColumn.Name = "horarioDataGridViewTextBoxColumn";
+            this.horarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horarioDataGridViewTextBoxColumn.Width = 66;
+            // 
+            // ligadoDataGridViewCheckBoxColumn
+            // 
+            this.ligadoDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ligadoDataGridViewCheckBoxColumn.DataPropertyName = "ligado";
+            this.ligadoDataGridViewCheckBoxColumn.HeaderText = "Ligado";
+            this.ligadoDataGridViewCheckBoxColumn.Name = "ligadoDataGridViewCheckBoxColumn";
+            this.ligadoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ligadoDataGridViewCheckBoxColumn.Width = 45;
+            // 
             // Prog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(894, 369);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
@@ -444,15 +620,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,7 +661,6 @@
         private GesSpotDataSet3 gesSpotDataSet3;
         private System.Windows.Forms.BindingSource progHorBindingSource1;
         private GesSpotDataSet3TableAdapters.ProgHorTableAdapter progHorTableAdapter1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private GesSpotDataSet4 gesSpotDataSet4;
         private System.Windows.Forms.BindingSource progHorBindingSource2;
         private GesSpotDataSet4TableAdapters.ProgHorTableAdapter progHorTableAdapter2;
@@ -487,11 +673,9 @@
         private GesSpotDataSet7 gesSpotDataSet7;
         private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource1;
         private GesSpotDataSet7TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn buttonTextDataGridViewTextBoxColumn;
         private GesSpotDataSet8 gesSpotDataSet8;
         private System.Windows.Forms.BindingSource scheduleBindingSource;
         private GesSpotDataSet8TableAdapters.ScheduleTableAdapter scheduleTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
@@ -503,5 +687,31 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private GesSpotDataSet21 gesSpotDataSet21;
+        private System.Windows.Forms.BindingSource scheduleBindingSource1;
+        private GesSpotDataSet21TableAdapters.ScheduleTableAdapter scheduleTableAdapter1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private GesSpotDataSet22 gesSpotDataSet22;
+        private System.Windows.Forms.BindingSource scheduleBindingSource2;
+        private GesSpotDataSet22TableAdapters.ScheduleTableAdapter scheduleTableAdapter2;
+        private GesSpotDataSet gesSpotDataSet10;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private GesSpotDataSet23 gesSpotDataSet23;
+        private System.Windows.Forms.BindingSource scheduleBindingSource3;
+        private GesSpotDataSet23TableAdapters.ScheduleTableAdapter scheduleTableAdapter3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private GesAnunciosDataSet7 gesAnunciosDataSet7;
+        private System.Windows.Forms.BindingSource scheduleBindingSource4;
+        private GesAnunciosDataSet7TableAdapters.ScheduleTableAdapter scheduleTableAdapter4;
+        private GesAnunciosDataSet8 gesAnunciosDataSet8;
+        private System.Windows.Forms.BindingSource scheduleBindingSource5;
+        private GesAnunciosDataSet8TableAdapters.ScheduleTableAdapter scheduleTableAdapter5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn buttonTextDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ligadoDataGridViewCheckBoxColumn;
     }
 }

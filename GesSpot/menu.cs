@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 using System.Timers;
 
 namespace GesSpot
@@ -18,32 +18,20 @@ namespace GesSpot
     public partial class Menu : Form
     {
         string anuncio;
-        System.Timers.Timer timer;
         public Menu()
         {
             InitializeComponent();
             this.FormClosing += Menu_FormClosing;
+           
         }
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gesSpotDataSet15.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter1.Fill(this.gesSpotDataSet15.AberturaFecho);
-            // TODO: This line of code loads data into the 'gesSpotDataSet14.AberturaFecho' table. You can move, or remove it, as needed.
-            this.aberturaFechoTableAdapter.Fill(this.gesSpotDataSet14.AberturaFecho);
+
             label4.Visible = false;
             label4.Text = "";
-            timer = new System.Timers.Timer();
-            timer.Enabled = true;
-            timer.Interval = 1000;
-            timer.Elapsed += Timer_Elapsed;
-
-        }
-
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            
-        }
+           
+        }    
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -84,13 +72,14 @@ namespace GesSpot
         /*--------------------------Clock-------------------------*/
         public void timer1_Tick(object sender, EventArgs e)
         {
+            bool onligado;
             label1.Text = DateTime.Now.ToString("HH:mm");
             label2.Text = ":" + DateTime.Now.ToString("ss");
             label3.Text = DateTime.Now.ToLongDateString();
             DateTime current = DateTime.Now;
-            SqlConnection con = Utility.DataBaseConnection();
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Schedule", con);
-            SqlDataAdapter sdab = new SqlDataAdapter("SELECT * FROM AberturaFecho", con);
+            SqlCeConnection con = Utility.DataBaseConnection();
+            SqlCeDataAdapter sda = new SqlCeDataAdapter("SELECT * FROM Schedule", con);
+            SqlCeDataAdapter sdab = new SqlCeDataAdapter("SELECT * FROM AberturaFecho", con);
             DataTable dt = new DataTable();
             DataTable du = new DataTable();
             sda.Fill(dt);
@@ -138,24 +127,31 @@ namespace GesSpot
                     label4.Text = anuncio;
                     PlayProg(r["anuncioFecho"].ToString());                    
                 }
-                label8.Text = r["abertura"].ToString();
-                label9.Text = r["fecho"].ToString();
+                string abertura = r["abertura"].ToString();
+                abertura = abertura.Substring(11);
+                string fecho = r["fecho"].ToString();
+                fecho = fecho.Substring(11);
+                label8.Text = abertura;
+                label9.Text = fecho;
             }
                 
 
             foreach (DataRow row in dt.Rows)
-            {
-                
-                DateTime myTime;
-                string anTime = row["horario"].ToString();
-                string ficheiro = row["buttonPath"].ToString();
-                anuncio = row["buttonText"].ToString();
-                myTime = DateTime.Parse(anTime);
-                if (myTime.Hour == current.Hour && myTime.Minute == current.Minute && myTime.Second == current.Second)
-                {                    
-                    label4.Text = anuncio;
-                    PlayProg(ficheiro);                  
-                }                
+            {                
+                onligado = Convert.ToBoolean(row["ligado"].ToString()); 
+                if (onligado)
+                {
+                    DateTime myTime;
+                    string anTime = row["horario"].ToString();
+                    string ficheiro = row["buttonPath"].ToString();
+                    anuncio = row["buttonText"].ToString();
+                    myTime = DateTime.Parse(anTime);
+                    if (myTime.Hour == current.Hour && myTime.Minute == current.Minute && myTime.Second == current.Second)
+                    {
+                        label4.Text = anuncio;
+                        PlayProg(ficheiro);
+                    }
+                }
             }
         }
         /*--------------------------------------------------------*/
@@ -164,42 +160,30 @@ namespace GesSpot
         {
             Utility.PlayPause();
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
-            wplayer.URL = Url;                   
-            wplayer.controls.play();            
+            wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_Player_PlayStateChange);
+            wplayer.URL = Url;
+            //string i = wplayer.currentMedia.durationString;            
+            wplayer.controls.play();
+            
+                        
         }
 
-        private void Player_PlayStateChange(int NewState)
+        private void wplayer_Player_PlayStateChange(int NewState)
         {
-            if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsPlaying)
-            {
-                label10.Visible = true;
-                label4.Visible = true;
-                //label4.Text = anuncio;
-
-                foreach (Control c in Controls)
+            if (NewState == 1 || NewState == 8)
+            //if (NewState != 3)
                 {
-                    Button b = c as Button;
-                    if (b != null)
-                    {
-                        b.Enabled = true;
-                    }
-                }
-            }
-                if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsMediaEnded)
-            {
                 Utility.PlayPause();
                 label10.Visible = false;
                 label4.Visible = false;
-                label4.Text = "";
-                foreach (Control c in Controls)
-                {
-                    Button b = c as Button;
-                    if (b != null)
-                    {
-                        b.Enabled = true;
-                    }
-                }
+                //label4.Text = "";
+            }
+
+            if (NewState == 3)
+            {
+                label10.Visible = true;
+                label4.Visible = true;
+               
             }
         }
 
@@ -208,5 +192,10 @@ namespace GesSpot
             AberturaFecho frm = new AberturaFecho();
             frm.ShowDialog();
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }        
     }
 }
