@@ -43,21 +43,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.gesSpotDataSet14 = new GesSpot.GesSpotDataSet14();
             this.aberturaFechoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aberturaFechoTableAdapter = new GesSpot.GesSpotDataSet14TableAdapters.AberturaFechoTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
-            this.gesSpotDataSet15 = new GesSpot.GesSpotDataSet15();
             this.aberturaFechoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aberturaFechoTableAdapter1 = new GesSpot.GesSpotDataSet15TableAdapters.AberturaFechoTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,17 +214,13 @@
             // 
             // gesSpotDataSet14
             // 
-            this.gesSpotDataSet14.DataSetName = "GesSpotDataSet14";
-            this.gesSpotDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource
             // 
             this.aberturaFechoBindingSource.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource.DataSource = this.gesSpotDataSet14;
             // 
             // aberturaFechoTableAdapter
             // 
-            this.aberturaFechoTableAdapter.ClearBeforeFill = true;
             // 
             // label7
             // 
@@ -246,17 +236,13 @@
             // 
             // gesSpotDataSet15
             // 
-            this.gesSpotDataSet15.DataSetName = "GesSpotDataSet15";
-            this.gesSpotDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+           // 
             // aberturaFechoBindingSource1
             // 
             this.aberturaFechoBindingSource1.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource1.DataSource = this.gesSpotDataSet15;
             // 
             // aberturaFechoTableAdapter1
             // 
-            this.aberturaFechoTableAdapter1.ClearBeforeFill = true;
             // 
             // label8
             // 
@@ -340,9 +326,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GesSpot";
             this.Load += new System.EventHandler(this.Menu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -364,13 +348,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private GesSpotDataSet14 gesSpotDataSet14;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource;
-        private GesSpotDataSet14TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter;
         private System.Windows.Forms.Label label7;
-        private GesSpotDataSet15 gesSpotDataSet15;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource1;
-        private GesSpotDataSet15TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

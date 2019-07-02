@@ -43,12 +43,8 @@
             this.aberturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aberturaFechoBindingSource11 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet6 = new GesSpot.GesAnunciosDataSet6();
             this.aberturaFechoBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet = new GesSpot.GesAnunciosDataSet();
             this.aberturaFechoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet13 = new GesSpot.GesSpotDataSet13();
-            this.aberturaFechoTableAdapter = new GesSpot.GesSpotDataSet13TableAdapters.AberturaFechoTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,62 +55,30 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.aberturaFechoBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet2 = new GesSpot.GesAnunciosDataSet2();
             this.aberturaFechoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet16 = new GesSpot.GesSpotDataSet16();
             this.aberturaFechoBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet3 = new GesSpot.GesAnunciosDataSet3();
             this.aberturaFechoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet17 = new GesSpot.GesSpotDataSet17();
             this.aberturaFechoBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet4 = new GesSpot.GesAnunciosDataSet4();
             this.aberturaFechoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet18 = new GesSpot.GesSpotDataSet18();
             this.aberturaFechoBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet5 = new GesSpot.GesAnunciosDataSet5();
             this.aberturaFechoBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet20 = new GesSpot.GesSpotDataSet20();
-            this.aberturaFechoTableAdapter1 = new GesSpot.GesSpotDataSet16TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter2 = new GesSpot.GesSpotDataSet17TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter3 = new GesSpot.GesSpotDataSet18TableAdapters.AberturaFechoTableAdapter();
-            this.gesSpotDataSet19 = new GesSpot.GesSpotDataSet19();
             this.aberturaFechoBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.aberturaFechoTableAdapter4 = new GesSpot.GesSpotDataSet19TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter5 = new GesSpot.GesSpotDataSet20TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter6 = new GesSpot.GesAnunciosDataSetTableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter7 = new GesSpot.GesAnunciosDataSet2TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter8 = new GesSpot.GesAnunciosDataSet3TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter9 = new GesSpot.GesAnunciosDataSet4TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter10 = new GesSpot.GesAnunciosDataSet5TableAdapters.AberturaFechoTableAdapter();
-            this.aberturaFechoTableAdapter11 = new GesSpot.GesAnunciosDataSet6TableAdapters.AberturaFechoTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -256,36 +220,26 @@
             // aberturaFechoBindingSource11
             // 
             this.aberturaFechoBindingSource11.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource11.DataSource = this.gesAnunciosDataSet6;
             // 
             // gesAnunciosDataSet6
             // 
-            this.gesAnunciosDataSet6.DataSetName = "GesAnunciosDataSet6";
-            this.gesAnunciosDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource6
             // 
             this.aberturaFechoBindingSource6.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource6.DataSource = this.gesAnunciosDataSet;
             // 
             // gesAnunciosDataSet
             // 
-            this.gesAnunciosDataSet.DataSetName = "GesAnunciosDataSet";
-            this.gesAnunciosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource
             // 
             this.aberturaFechoBindingSource.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource.DataSource = this.gesSpotDataSet13;
             // 
             // gesSpotDataSet13
             // 
-            this.gesSpotDataSet13.DataSetName = "GesSpotDataSet13";
-            this.gesSpotDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoTableAdapter
             // 
-            this.aberturaFechoTableAdapter.ClearBeforeFill = true;
             // 
             // label4
             // 
@@ -385,136 +339,98 @@
             // aberturaFechoBindingSource7
             // 
             this.aberturaFechoBindingSource7.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource7.DataSource = this.gesAnunciosDataSet2;
             // 
             // gesAnunciosDataSet2
             // 
-            this.gesAnunciosDataSet2.DataSetName = "GesAnunciosDataSet2";
-            this.gesAnunciosDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource1
             // 
             this.aberturaFechoBindingSource1.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource1.DataSource = this.gesSpotDataSet16;
             // 
             // gesSpotDataSet16
             // 
-            this.gesSpotDataSet16.DataSetName = "GesSpotDataSet16";
-            this.gesSpotDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource8
             // 
             this.aberturaFechoBindingSource8.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource8.DataSource = this.gesAnunciosDataSet3;
             // 
             // gesAnunciosDataSet3
             // 
-            this.gesAnunciosDataSet3.DataSetName = "GesAnunciosDataSet3";
-            this.gesAnunciosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource2
             // 
             this.aberturaFechoBindingSource2.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource2.DataSource = this.gesSpotDataSet17;
             // 
             // gesSpotDataSet17
             // 
-            this.gesSpotDataSet17.DataSetName = "GesSpotDataSet17";
-            this.gesSpotDataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource9
             // 
             this.aberturaFechoBindingSource9.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource9.DataSource = this.gesAnunciosDataSet4;
             // 
             // gesAnunciosDataSet4
             // 
-            this.gesAnunciosDataSet4.DataSetName = "GesAnunciosDataSet4";
-            this.gesAnunciosDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource3
             // 
             this.aberturaFechoBindingSource3.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource3.DataSource = this.gesSpotDataSet18;
             // 
             // gesSpotDataSet18
             // 
-            this.gesSpotDataSet18.DataSetName = "GesSpotDataSet18";
-            this.gesSpotDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource10
             // 
             this.aberturaFechoBindingSource10.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource10.DataSource = this.gesAnunciosDataSet5;
             // 
             // gesAnunciosDataSet5
             // 
-            this.gesAnunciosDataSet5.DataSetName = "GesAnunciosDataSet5";
-            this.gesAnunciosDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource5
             // 
             this.aberturaFechoBindingSource5.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource5.DataSource = this.gesSpotDataSet20;
             // 
             // gesSpotDataSet20
             // 
-            this.gesSpotDataSet20.DataSetName = "GesSpotDataSet20";
-            this.gesSpotDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoTableAdapter1
             // 
-            this.aberturaFechoTableAdapter1.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter2
             // 
-            this.aberturaFechoTableAdapter2.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter3
             // 
-            this.aberturaFechoTableAdapter3.ClearBeforeFill = true;
             // 
             // gesSpotDataSet19
             // 
-            this.gesSpotDataSet19.DataSetName = "GesSpotDataSet19";
-            this.gesSpotDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aberturaFechoBindingSource4
             // 
             this.aberturaFechoBindingSource4.DataMember = "AberturaFecho";
-            this.aberturaFechoBindingSource4.DataSource = this.gesSpotDataSet19;
             // 
             // aberturaFechoTableAdapter4
             // 
-            this.aberturaFechoTableAdapter4.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter5
             // 
-            this.aberturaFechoTableAdapter5.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter6
             // 
-            this.aberturaFechoTableAdapter6.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter7
             // 
-            this.aberturaFechoTableAdapter7.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter8
             // 
-            this.aberturaFechoTableAdapter8.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter9
             // 
-            this.aberturaFechoTableAdapter9.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter10
             // 
-            this.aberturaFechoTableAdapter10.ClearBeforeFill = true;
             // 
             // aberturaFechoTableAdapter11
             // 
-            this.aberturaFechoTableAdapter11.ClearBeforeFill = true;
             // 
             // textBox1
             // 
@@ -580,28 +496,16 @@
             this.Load += new System.EventHandler(this.AberturaFecho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aberturaFechoBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -617,9 +521,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private GesSpotDataSet13 gesSpotDataSet13;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource;
-        private GesSpotDataSet13TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -629,39 +531,17 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private GesSpotDataSet16 gesSpotDataSet16;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource1;
-        private GesSpotDataSet16TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter1;
-        private GesSpotDataSet17 gesSpotDataSet17;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource2;
-        private GesSpotDataSet17TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter2;
-        private GesSpotDataSet18 gesSpotDataSet18;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource3;
-        private GesSpotDataSet18TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter3;
-        private GesSpotDataSet19 gesSpotDataSet19;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource4;
-        private GesSpotDataSet19TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter4;
-        private GesSpotDataSet20 gesSpotDataSet20;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource5;
-        private GesSpotDataSet20TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter5;
-        private GesAnunciosDataSet gesAnunciosDataSet;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource6;
-        private GesAnunciosDataSetTableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter6;
-        private GesAnunciosDataSet2 gesAnunciosDataSet2;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource7;
-        private GesAnunciosDataSet2TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter7;
-        private GesAnunciosDataSet3 gesAnunciosDataSet3;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource8;
-        private GesAnunciosDataSet3TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter8;
-        private GesAnunciosDataSet4 gesAnunciosDataSet4;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource9;
-        private GesAnunciosDataSet4TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter9;
-        private GesAnunciosDataSet5 gesAnunciosDataSet5;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource10;
-        private GesAnunciosDataSet5TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter10;
-        private GesAnunciosDataSet6 gesAnunciosDataSet6;
         private System.Windows.Forms.BindingSource aberturaFechoBindingSource11;
-        private GesAnunciosDataSet6TableAdapters.AberturaFechoTableAdapter aberturaFechoTableAdapter11;
         private System.Windows.Forms.DataGridViewTextBoxColumn aberturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechoDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox textBox1;
