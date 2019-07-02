@@ -15,7 +15,7 @@ namespace GesSpot
 {
     public partial class Shows : Form
     {
-
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         private void Shows_Load_1(object sender, EventArgs e)
         {
             SqlCeConnection con = Utility.DataBaseConnection();
@@ -272,7 +272,7 @@ namespace GesSpot
 
         }
         // Instancia os botões dos anuncios
-        
+
 
         /*----------------- Anuncios -----------------------------*/
         private void button_Clicked(object sender, EventArgs e)
@@ -285,9 +285,7 @@ namespace GesSpot
 
         public void PlaySpot(string Url)
         {
-            Utility.PlayPause();
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
+            wplayer.PlayStateChange += new _WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
             wplayer.URL = Url;
             // Desliga todos os botoes
             foreach (Control c in Controls)
@@ -303,7 +301,11 @@ namespace GesSpot
 
         private void Player_PlayStateChange(int NewState)
         {
-            if (NewState == 1 || NewState == 8)
+            if (NewState == 3)
+            {
+                Utility.PlayPause();
+            }
+            if (NewState == 8)
             {
                 Utility.PlayPause();
                 foreach (Control c in Controls)
@@ -316,8 +318,6 @@ namespace GesSpot
                 }
             }
         }
-
-        
         /*----------------------------------------------*/
     }
 }

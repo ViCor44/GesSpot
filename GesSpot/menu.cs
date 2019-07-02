@@ -18,6 +18,7 @@ namespace GesSpot
     public partial class Menu : Form
     {
         string anuncio;
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         public Menu()
         {
             InitializeComponent();
@@ -28,47 +29,8 @@ namespace GesSpot
         private void Menu_Load(object sender, EventArgs e)
         {
 
-            label4.Visible = false;
-            label4.Text = "";
-           
         }    
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Anuncios frm = new Anuncios();
-            frm.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CriaAnuncio frm = new CriaAnuncio();
-            frm.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Prog frm = new Prog();
-            frm.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Shows frm = new Shows();
-            frm.ShowDialog();
-        }
-        /*-------------------Fechar Aplicação---------------------*/
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (Utility.CloseApliccation())
-                System.Environment.Exit(0);
-        }
-
-        private void Menu_FormClosing(Object sender, FormClosingEventArgs e)
-        {
-            if (!Utility.CloseApliccation())
-                e.Cancel = true;            
-        }
-        /*--------------------------------------------------------*/
         /*--------------------------Clock-------------------------*/
         public void timer1_Tick(object sender, EventArgs e)
         {
@@ -133,6 +95,7 @@ namespace GesSpot
                 fecho = fecho.Substring(11);
                 label8.Text = abertura;
                 label9.Text = fecho;
+                progressBar1.Value = (int)wplayer.controls.currentPosition;
             }
                 
 
@@ -158,34 +121,71 @@ namespace GesSpot
 
         public void PlayProg(string Url)
         {
-            Utility.PlayPause();
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            
             wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_Player_PlayStateChange);
             wplayer.URL = Url;
-            //string i = wplayer.currentMedia.durationString;            
-            wplayer.controls.play();
-            
-                        
+            wplayer.controls.play();                       
         }
 
         private void wplayer_Player_PlayStateChange(int NewState)
         {
-            if (NewState == 1 || NewState == 8)
-            //if (NewState != 3)
-                {
-                Utility.PlayPause();
-                label10.Visible = false;
-                label4.Visible = false;
-                //label4.Text = "";
-            }
-
             if (NewState == 3)
             {
+                Utility.PlayPause();                
                 label10.Visible = true;
                 label4.Visible = true;
-               
+                double dur = wplayer.currentMedia.duration;
+                progressBar1.Visible = true;
+                progressBar1.Maximum = (int)dur;
+                return;
+            }
+            if (NewState == 8)            
+            {
+
+                label10.Visible = false;
+                label4.Visible = false;
+                progressBar1.Visible = false;
+                if (anuncio == "Fecho")
+                    return;
+                Utility.PlayPause();
             }
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Anuncios frm = new Anuncios();
+            frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CriaAnuncio frm = new CriaAnuncio();
+            frm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Prog frm = new Prog();
+            frm.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Shows frm = new Shows();
+            frm.ShowDialog();
+        }
+        /*-------------------Fechar Aplicação---------------------*/
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Utility.CloseApliccation())
+                System.Environment.Exit(0);
+        }
+
+        private void Menu_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            if (!Utility.CloseApliccation())
+                e.Cancel = true;
+        }
+        /*--------------------------------------------------------*/
 
         private void button7_Click(object sender, EventArgs e)
         {
