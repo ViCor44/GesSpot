@@ -15,6 +15,7 @@ namespace GesSpot
 {
     public partial class Anuncios : Form
     {
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         public Anuncios()
         {
             InitializeComponent();
@@ -281,9 +282,7 @@ namespace GesSpot
         }      
 
         public void PlaySpot(string Url)
-        {
-            Utility.PlayPause();
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+        {            
             wplayer.PlayStateChange += new _WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
             wplayer.URL = Url;
             // Desliga todos os botoes
@@ -296,14 +295,15 @@ namespace GesSpot
                 }
             }
             wplayer.controls.play();
-           
-
         }
 
         private void Player_PlayStateChange(int NewState)
         {
-            //if (NewState == 1 || NewState == 8)
-            if (NewState != 3)
+            if(NewState == 3)
+            {
+                Utility.PlayPause();
+            }            
+            if (NewState == 8)
             {
                 Utility.PlayPause();
                 foreach (Control c in Controls)
