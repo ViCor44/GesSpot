@@ -32,102 +32,58 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.gesSpotDataSet1 = new GesSpot.GesSpotDataSet1();
             this.buttonPropertiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonPropertiesTableAdapter1 = new GesSpot.GesSpotDataSet1TableAdapters.ButtonPropertiesTableAdapter();
             this.buttonAnuncioPropertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet6 = new GesSpot.GesSpotDataSet6();
             this.buttonSlidePropertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet5 = new GesSpot.GesSpotDataSet5();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.progHorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet2 = new GesSpot.GesSpotDataSet2();
             this.gesSpotDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.progHorTableAdapter = new GesSpot.GesSpotDataSet2TableAdapters.ProgHorTableAdapter();
-            this.gesSpotDataSet3 = new GesSpot.GesSpotDataSet3();
             this.progHorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.progHorTableAdapter1 = new GesSpot.GesSpotDataSet3TableAdapters.ProgHorTableAdapter();
             this.scheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet8 = new GesSpot.GesSpotDataSet8();
             this.buttonAnuncioPropertiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet7 = new GesSpot.GesSpotDataSet7();
             this.progHorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet4 = new GesSpot.GesSpotDataSet4();
-            this.progHorTableAdapter2 = new GesSpot.GesSpotDataSet4TableAdapters.ProgHorTableAdapter();
-            this.buttonSlidePropertiesTableAdapter = new GesSpot.GesSpotDataSet5TableAdapters.ButtonSlidePropertiesTableAdapter();
-            this.buttonAnuncioPropertiesTableAdapter = new GesSpot.GesSpotDataSet6TableAdapters.ButtonAnuncioPropertiesTableAdapter();
-            this.buttonAnuncioPropertiesTableAdapter1 = new GesSpot.GesSpotDataSet7TableAdapters.ButtonAnuncioPropertiesTableAdapter();
-            this.scheduleTableAdapter = new GesSpot.GesSpotDataSet8TableAdapters.ScheduleTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.scheduleBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet8 = new GesSpot.GesAnunciosDataSet8();
             this.scheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet21 = new GesSpot.GesSpotDataSet21();
             this.buttonAnuncioPropertiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet9 = new GesSpot.GesSpotDataSet9();
-            this.buttonAnuncioPropertiesTableAdapter2 = new GesSpot.GesSpotDataSet9TableAdapters.ButtonAnuncioPropertiesTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.scheduleTableAdapter1 = new GesSpot.GesSpotDataSet21TableAdapters.ScheduleTableAdapter();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.scheduleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet22 = new GesSpot.GesSpotDataSet22();
-            this.scheduleTableAdapter2 = new GesSpot.GesSpotDataSet22TableAdapters.ScheduleTableAdapter();
-            this.gesSpotDataSet10 = new GesSpot.GesSpotDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.scheduleBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesAnunciosDataSet7 = new GesSpot.GesAnunciosDataSet7();
             this.scheduleBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.gesSpotDataSet23 = new GesSpot.GesSpotDataSet23();
-            this.scheduleTableAdapter3 = new GesSpot.GesSpotDataSet23TableAdapters.ScheduleTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.scheduleTableAdapter4 = new GesSpot.GesAnunciosDataSet7TableAdapters.ScheduleTableAdapter();
-            this.scheduleTableAdapter5 = new GesSpot.GesAnunciosDataSet8TableAdapters.ScheduleTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ligadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPropertiesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSlidePropertiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet23)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -144,37 +100,27 @@
             // 
             // gesSpotDataSet1
             // 
-            this.gesSpotDataSet1.DataSetName = "GesSpotDataSet1";
-            this.gesSpotDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonPropertiesBindingSource2
             // 
             this.buttonPropertiesBindingSource2.DataMember = "ButtonProperties";
-            this.buttonPropertiesBindingSource2.DataSource = this.gesSpotDataSet1;
             // 
             // buttonPropertiesTableAdapter1
             // 
-            this.buttonPropertiesTableAdapter1.ClearBeforeFill = true;
             // 
             // buttonAnuncioPropertiesBindingSource
             // 
             this.buttonAnuncioPropertiesBindingSource.DataMember = "ButtonAnuncioProperties";
-            this.buttonAnuncioPropertiesBindingSource.DataSource = this.gesSpotDataSet6;
             // 
             // gesSpotDataSet6
             // 
-            this.gesSpotDataSet6.DataSetName = "GesSpotDataSet6";
-            this.gesSpotDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonSlidePropertiesBindingSource
             // 
             this.buttonSlidePropertiesBindingSource.DataMember = "ButtonSlideProperties";
-            this.buttonSlidePropertiesBindingSource.DataSource = this.gesSpotDataSet5;
             // 
             // gesSpotDataSet5
             // 
-            this.gesSpotDataSet5.DataSetName = "GesSpotDataSet5";
-            this.gesSpotDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -216,80 +162,58 @@
             // progHorBindingSource
             // 
             this.progHorBindingSource.DataMember = "ProgHor";
-            this.progHorBindingSource.DataSource = this.gesSpotDataSet2;
             // 
             // gesSpotDataSet2
             // 
-            this.gesSpotDataSet2.DataSetName = "GesSpotDataSet2";
-            this.gesSpotDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // progHorTableAdapter
             // 
-            this.progHorTableAdapter.ClearBeforeFill = true;
             // 
             // gesSpotDataSet3
             // 
-            this.gesSpotDataSet3.DataSetName = "GesSpotDataSet3";
-            this.gesSpotDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // progHorBindingSource1
             // 
             this.progHorBindingSource1.DataMember = "ProgHor";
-            this.progHorBindingSource1.DataSource = this.gesSpotDataSet3;
             // 
             // progHorTableAdapter1
             // 
-            this.progHorTableAdapter1.ClearBeforeFill = true;
             // 
             // scheduleBindingSource
             // 
             this.scheduleBindingSource.DataMember = "Schedule";
-            this.scheduleBindingSource.DataSource = this.gesSpotDataSet8;
             // 
             // gesSpotDataSet8
             // 
-            this.gesSpotDataSet8.DataSetName = "GesSpotDataSet8";
-            this.gesSpotDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonAnuncioPropertiesBindingSource1
             // 
             this.buttonAnuncioPropertiesBindingSource1.DataMember = "ButtonAnuncioProperties";
-            this.buttonAnuncioPropertiesBindingSource1.DataSource = this.gesSpotDataSet7;
             // 
             // gesSpotDataSet7
             // 
-            this.gesSpotDataSet7.DataSetName = "GesSpotDataSet7";
-            this.gesSpotDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // progHorBindingSource2
             // 
             this.progHorBindingSource2.DataMember = "ProgHor";
-            this.progHorBindingSource2.DataSource = this.gesSpotDataSet4;
             // 
             // gesSpotDataSet4
             // 
-            this.gesSpotDataSet4.DataSetName = "GesSpotDataSet4";
-            this.gesSpotDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // progHorTableAdapter2
             // 
-            this.progHorTableAdapter2.ClearBeforeFill = true;
             // 
             // buttonSlidePropertiesTableAdapter
             // 
-            this.buttonSlidePropertiesTableAdapter.ClearBeforeFill = true;
             // 
             // buttonAnuncioPropertiesTableAdapter
             // 
-            this.buttonAnuncioPropertiesTableAdapter.ClearBeforeFill = true;
             // 
             // buttonAnuncioPropertiesTableAdapter1
             // 
-            this.buttonAnuncioPropertiesTableAdapter1.ClearBeforeFill = true;
             // 
             // scheduleTableAdapter
             // 
-            this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
             // label2
             // 
@@ -346,36 +270,26 @@
             // scheduleBindingSource5
             // 
             this.scheduleBindingSource5.DataMember = "Schedule";
-            this.scheduleBindingSource5.DataSource = this.gesAnunciosDataSet8;
             // 
             // gesAnunciosDataSet8
             // 
-            this.gesAnunciosDataSet8.DataSetName = "GesAnunciosDataSet8";
-            this.gesAnunciosDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleBindingSource1
             // 
             this.scheduleBindingSource1.DataMember = "Schedule";
-            this.scheduleBindingSource1.DataSource = this.gesSpotDataSet21;
             // 
             // gesSpotDataSet21
             // 
-            this.gesSpotDataSet21.DataSetName = "GesSpotDataSet21";
-            this.gesSpotDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonAnuncioPropertiesBindingSource2
             // 
             this.buttonAnuncioPropertiesBindingSource2.DataMember = "ButtonAnuncioProperties";
-            this.buttonAnuncioPropertiesBindingSource2.DataSource = this.gesSpotDataSet9;
             // 
             // gesSpotDataSet9
             // 
-            this.gesSpotDataSet9.DataSetName = "GesSpotDataSet9";
-            this.gesSpotDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonAnuncioPropertiesTableAdapter2
             // 
-            this.buttonAnuncioPropertiesTableAdapter2.ClearBeforeFill = true;
             // 
             // openFileDialog1
             // 
@@ -407,7 +321,6 @@
             // 
             // scheduleTableAdapter1
             // 
-            this.scheduleTableAdapter1.ClearBeforeFill = true;
             // 
             // radioButton1
             // 
@@ -436,21 +349,15 @@
             // scheduleBindingSource2
             // 
             this.scheduleBindingSource2.DataMember = "Schedule";
-            this.scheduleBindingSource2.DataSource = this.gesSpotDataSet22;
             // 
             // gesSpotDataSet22
             // 
-            this.gesSpotDataSet22.DataSetName = "GesSpotDataSet22";
-            this.gesSpotDataSet22.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleTableAdapter2
             // 
-            this.scheduleTableAdapter2.ClearBeforeFill = true;
             // 
             // gesSpotDataSet10
             // 
-            this.gesSpotDataSet10.DataSetName = "GesSpotDataSet";
-            this.gesSpotDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView1
             // 
@@ -478,26 +385,19 @@
             // scheduleBindingSource4
             // 
             this.scheduleBindingSource4.DataMember = "Schedule";
-            this.scheduleBindingSource4.DataSource = this.gesAnunciosDataSet7;
             // 
             // gesAnunciosDataSet7
             // 
-            this.gesAnunciosDataSet7.DataSetName = "GesAnunciosDataSet7";
-            this.gesAnunciosDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleBindingSource3
             // 
             this.scheduleBindingSource3.DataMember = "Schedule";
-            this.scheduleBindingSource3.DataSource = this.gesSpotDataSet23;
             // 
             // gesSpotDataSet23
             // 
-            this.gesSpotDataSet23.DataSetName = "GesSpotDataSet23";
-            this.gesSpotDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // scheduleTableAdapter3
             // 
-            this.scheduleTableAdapter3.ClearBeforeFill = true;
             // 
             // label6
             // 
@@ -535,11 +435,9 @@
             // 
             // scheduleTableAdapter4
             // 
-            this.scheduleTableAdapter4.ClearBeforeFill = true;
             // 
             // scheduleTableAdapter5
             // 
-            this.scheduleTableAdapter5.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -609,37 +507,22 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prog";
             this.Load += new System.EventHandler(this.Prog_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPropertiesBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSlidePropertiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progHorBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonAnuncioPropertiesBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesAnunciosDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gesSpotDataSet23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -648,67 +531,38 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private GesSpotDataSet1 gesSpotDataSet1;
         private System.Windows.Forms.BindingSource buttonPropertiesBindingSource2;
-        private GesSpotDataSet1TableAdapters.ButtonPropertiesTableAdapter buttonPropertiesTableAdapter1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource gesSpotDataSetBindingSource;
-        private GesSpotDataSet2 gesSpotDataSet2;
         private System.Windows.Forms.BindingSource progHorBindingSource;
-        private GesSpotDataSet2TableAdapters.ProgHorTableAdapter progHorTableAdapter;
-        private GesSpotDataSet3 gesSpotDataSet3;
         private System.Windows.Forms.BindingSource progHorBindingSource1;
-        private GesSpotDataSet3TableAdapters.ProgHorTableAdapter progHorTableAdapter1;
-        private GesSpotDataSet4 gesSpotDataSet4;
         private System.Windows.Forms.BindingSource progHorBindingSource2;
-        private GesSpotDataSet4TableAdapters.ProgHorTableAdapter progHorTableAdapter2;
-        private GesSpotDataSet5 gesSpotDataSet5;
         private System.Windows.Forms.BindingSource buttonSlidePropertiesBindingSource;
-        private GesSpotDataSet5TableAdapters.ButtonSlidePropertiesTableAdapter buttonSlidePropertiesTableAdapter;
-        private GesSpotDataSet6 gesSpotDataSet6;
         private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource;
-        private GesSpotDataSet6TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter;
-        private GesSpotDataSet7 gesSpotDataSet7;
         private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource1;
-        private GesSpotDataSet7TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter1;
-        private GesSpotDataSet8 gesSpotDataSet8;
         private System.Windows.Forms.BindingSource scheduleBindingSource;
-        private GesSpotDataSet8TableAdapters.ScheduleTableAdapter scheduleTableAdapter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private GesSpotDataSet9 gesSpotDataSet9;
         private System.Windows.Forms.BindingSource buttonAnuncioPropertiesBindingSource2;
-        private GesSpotDataSet9TableAdapters.ButtonAnuncioPropertiesTableAdapter buttonAnuncioPropertiesTableAdapter2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
-        private GesSpotDataSet21 gesSpotDataSet21;
         private System.Windows.Forms.BindingSource scheduleBindingSource1;
-        private GesSpotDataSet21TableAdapters.ScheduleTableAdapter scheduleTableAdapter1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private GesSpotDataSet22 gesSpotDataSet22;
         private System.Windows.Forms.BindingSource scheduleBindingSource2;
-        private GesSpotDataSet22TableAdapters.ScheduleTableAdapter scheduleTableAdapter2;
-        private GesSpotDataSet gesSpotDataSet10;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private GesSpotDataSet23 gesSpotDataSet23;
         private System.Windows.Forms.BindingSource scheduleBindingSource3;
-        private GesSpotDataSet23TableAdapters.ScheduleTableAdapter scheduleTableAdapter3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
-        private GesAnunciosDataSet7 gesAnunciosDataSet7;
         private System.Windows.Forms.BindingSource scheduleBindingSource4;
-        private GesAnunciosDataSet7TableAdapters.ScheduleTableAdapter scheduleTableAdapter4;
-        private GesAnunciosDataSet8 gesAnunciosDataSet8;
         private System.Windows.Forms.BindingSource scheduleBindingSource5;
-        private GesAnunciosDataSet8TableAdapters.ScheduleTableAdapter scheduleTableAdapter5;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn buttonTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horarioDataGridViewTextBoxColumn;

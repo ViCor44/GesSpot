@@ -17,6 +17,7 @@ namespace GesSpot
 {
     public partial class Menu : Form
     {
+        public static int state = 0;
         string anuncio;
         WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         public Menu()
@@ -120,8 +121,7 @@ namespace GesSpot
         /*--------------------------------------------------------*/
 
         public void PlayProg(string Url)
-        {
-            
+        {            
             wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_Player_PlayStateChange);
             wplayer.URL = Url;
             wplayer.controls.play();                       
@@ -129,26 +129,34 @@ namespace GesSpot
 
         private void wplayer_Player_PlayStateChange(int NewState)
         {
-            if (NewState == 3)
-            {
-                Utility.PlayPause();                
-                label10.Visible = true;
-                label4.Visible = true;
-                double dur = wplayer.currentMedia.duration;
-                progressBar1.Visible = true;
-                progressBar1.Maximum = (int)dur;
+            if (state == NewState)
                 return;
-            }
-            if (NewState == 8)            
+            state = NewState;           
+            switch (NewState)
             {
+                case 3:
+                    label10.Visible = true;
+                    label4.Visible = true;
+                    double dur = wplayer.currentMedia.duration;
+                    progressBar1.Visible = true;
+                    progressBar1.Maximum = (int)dur;
+                    break;
 
-                label10.Visible = false;
-                label4.Visible = false;
-                progressBar1.Visible = false;
-                if (anuncio == "Fecho")
-                    return;
-                Utility.PlayPause();
-            }
+                case 8:
+                    label10.Visible = false;
+                    label4.Visible = false;
+                    progressBar1.Visible = false;                    
+                    break;
+
+                case 9:
+                    if (anuncio == "Fecho")
+                        break;
+                    Utility.PlayPause();
+                    break;
+
+                default:
+                    break;
+            }            
         }
         private void button1_Click(object sender, EventArgs e)
         {
