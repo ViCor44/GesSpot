@@ -150,6 +150,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button7
@@ -212,15 +213,9 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Abertura";
             // 
-            // gesSpotDataSet14
-            // 
-            // 
             // aberturaFechoBindingSource
             // 
             this.aberturaFechoBindingSource.DataMember = "AberturaFecho";
-            // 
-            // aberturaFechoTableAdapter
-            // 
             // 
             // label7
             // 
@@ -234,15 +229,9 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Fecho";
             // 
-            // gesSpotDataSet15
-            // 
-           // 
             // aberturaFechoBindingSource1
             // 
             this.aberturaFechoBindingSource1.DataMember = "AberturaFecho";
-            // 
-            // aberturaFechoTableAdapter1
-            // 
             // 
             // label8
             // 

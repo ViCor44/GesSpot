@@ -18,7 +18,7 @@ namespace GesSpot
     public partial class Menu : Form
     {
         public static int state = 0;
-        string anuncio;
+        string anuncio;        
         WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
         public Menu()
         {
@@ -67,6 +67,7 @@ namespace GesSpot
                 {
                     anuncio = "15 Minutos para Fecho";
                     label4.Text = anuncio;
+                    Utility.PlayPause();
                     PlayProg(r["anuncio15"].ToString());
                 }
 
@@ -74,6 +75,7 @@ namespace GesSpot
                 {
                     anuncio = "10 Minutos para Fecho";
                     label4.Text = anuncio;
+                    Utility.PlayPause();
                     PlayProg(r["anuncio10"].ToString());
                 }
 
@@ -81,14 +83,16 @@ namespace GesSpot
                 {
                     anuncio = "5 Minutos para Fecho";
                     label4.Text = anuncio;
-                    PlayProg(r["anuncio5"].ToString());
+                    Utility.PlayPause();
+                    PlayProg(r["anuncio5"].ToString());                                                
+
                 }
 
                 if (myclosetime.Hour == current.Hour && myclosetime.Minute == current.Minute && myclosetime.Second == current.Second)
                 {
                     anuncio = "Fecho";
                     label4.Text = anuncio;
-                    PlayProg(r["anuncioFecho"].ToString());                    
+                    PlayProg(r["anuncioFecho"].ToString());
                 }
                 string abertura = r["abertura"].ToString();
                 abertura = abertura.Substring(11);
@@ -97,6 +101,13 @@ namespace GesSpot
                 label8.Text = abertura;
                 label9.Text = fecho;
                 progressBar1.Value = (int)wplayer.controls.currentPosition;
+                if(progressBar1.Value == progressBar1.Maximum - 1)
+                {
+                    if (anuncio == "Fecho")
+                        return;
+                    Utility.PlayPause();
+                }
+
             }
                 
 
@@ -113,7 +124,9 @@ namespace GesSpot
                     if (myTime.Hour == current.Hour && myTime.Minute == current.Minute && myTime.Second == current.Second)
                     {
                         label4.Text = anuncio;
+                        Utility.PlayPause();
                         PlayProg(ficheiro);
+
                     }
                 }
             }
@@ -121,10 +134,12 @@ namespace GesSpot
         /*--------------------------------------------------------*/
 
         public void PlayProg(string Url)
-        {            
+        {
+           
+           
             wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_Player_PlayStateChange);
             wplayer.URL = Url;
-            wplayer.controls.play();                       
+            wplayer.controls.play();
         }
 
         private void wplayer_Player_PlayStateChange(int NewState)
@@ -146,12 +161,6 @@ namespace GesSpot
                     label10.Visible = false;
                     label4.Visible = false;
                     progressBar1.Visible = false;                    
-                    break;
-
-                case 9:
-                    if (anuncio == "Fecho")
-                        break;
-                    Utility.PlayPause();
                     break;
 
                 default:
