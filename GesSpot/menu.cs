@@ -92,6 +92,7 @@ namespace GesSpot
                 {
                     anuncio = "Fecho";
                     label4.Text = anuncio;
+                    Utility.PlayPause();
                     PlayProg(r["anuncioFecho"].ToString());
                 }
                 string abertura = r["abertura"].ToString();
@@ -134,8 +135,7 @@ namespace GesSpot
         /*--------------------------------------------------------*/
 
         public void PlayProg(string Url)
-        {
-           
+        {          
            
             wplayer.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(wplayer_Player_PlayStateChange);
             wplayer.URL = Url;
