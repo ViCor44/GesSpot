@@ -69,6 +69,7 @@ namespace GesSpot
                     label4.Text = anuncio;
                     Utility.PlayPause();
                     PlayProg(r["anuncio15"].ToString());
+                    //Utility.PlayPause();
                 }
 
                 if (ten.Hour == current.Hour && ten.Minute == current.Minute && ten.Second == current.Second)
@@ -77,6 +78,7 @@ namespace GesSpot
                     label4.Text = anuncio;
                     Utility.PlayPause();
                     PlayProg(r["anuncio10"].ToString());
+                    //Utility.PlayPause();
                 }
 
                 if (five.Hour == current.Hour && five.Minute == current.Minute && five.Second == current.Second)
@@ -84,12 +86,13 @@ namespace GesSpot
                     anuncio = "5 Minutos para Fecho";
                     label4.Text = anuncio;
                     Utility.PlayPause();
-                    PlayProg(r["anuncio5"].ToString());                                                
+                    PlayProg(r["anuncio5"].ToString());
+                    //Utility.PlayPause();
 
                 }
 
                 if (myclosetime.Hour == current.Hour && myclosetime.Minute == current.Minute && myclosetime.Second == current.Second)
-                {
+                {                   
                     anuncio = "Fecho";
                     label4.Text = anuncio;
                     Utility.PlayPause();
@@ -104,8 +107,10 @@ namespace GesSpot
                 progressBar1.Value = (int)wplayer.controls.currentPosition;
                 if(progressBar1.Value == progressBar1.Maximum - 1)
                 {
-                    if (anuncio == "Fecho")
-                        return;
+                    if (label4.Text == "Fecho")
+                    {
+                        break;
+                    }                       
                     Utility.PlayPause();
                 }
 
@@ -127,7 +132,7 @@ namespace GesSpot
                         label4.Text = anuncio;
                         Utility.PlayPause();
                         PlayProg(ficheiro);
-
+                        //Utility.PlayPause();
                     }
                 }
             }
